@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      The Wild Blue Trek (Selvaggio Blu) - Self-Guided Adventure Guide
+    </title>
+    <style>
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: #f5f5dc;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+
+      /* Outer wrapper */
+      .page-wrapper {
+        width: 100%;
+        min-height: 100vh;
+      }
+
+      /* Header */
+      .header {
+        background-color: #003366;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        border-bottom: 4px solid #001a33;
+      }
+
+      .header h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        font-size: 28px;
+        letter-spacing: 2px;
+      }
+
+      .header p {
+        margin: 10px 0 0 0;
+        font-style: italic;
+        color: #ccc;
+      }
+
+      /* Main layout table */
+      .layout-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 180px;
+        background-color: #e8e8d0;
+        border-right: 3px solid #003366;
+        vertical-align: top;
+        padding: 0;
+      }
+
+      .sidebar-inner {
+        position: sticky;
+        top: 0;
+        padding: 15px 10px;
+      }
+
+      .sidebar h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #003366;
+        font-size: 14px;
+        margin: 0 0 10px 0;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #003366;
+        text-transform: uppercase;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .sidebar li {
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px dotted #999;
+      }
+
+      .sidebar a {
+        display: block;
+        padding: 8px 5px;
+        color: #003366;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .sidebar a:hover {
+        background-color: #003366;
+        color: #fff;
+      }
+
+      .sidebar .nav-divider {
+        height: 15px;
+        border-bottom: none;
+      }
+
+      .sidebar .page-link {
+        background-color: #d0d0c0;
+      }
+
+      .sidebar .page-link a {
+        color: #660000;
+      }
+
+      .sidebar .page-link a:hover {
+        background-color: #660000;
+        color: #fff;
+      }
+
+      .sidebar .current-page {
+        background-color: #003366;
+      }
+
+      .sidebar .current-page a {
+        color: #fff;
+      }
+
+      /* Main content */
+      .main-content {
+        vertical-align: top;
+        padding: 20px 30px;
+        background-color: #fff;
+      }
+
+      /* Section headers */
+      h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #003366;
+        border-bottom: 3px double #003366;
+        padding-bottom: 5px;
+        margin-top: 30px;
+      }
+
+      h2:first-child {
+        margin-top: 0;
+      }
+
+      h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #660000;
+        margin-top: 25px;
+      }
+
+      h4 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #336633;
+      }
+
+      /* Warning box */
+      .warning-box {
+        background-color: #fff3cd;
+        border: 3px solid #990000;
+        padding: 15px;
+        margin: 20px 0;
+      }
+
+      .warning-box h3 {
+        color: #990000;
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Info box */
+      .info-box {
+        background-color: #d4edda;
+        border: 2px solid #336633;
+        padding: 15px;
+        margin: 20px 0;
+      }
+
+      /* Tip box */
+      .tip-box {
+        background-color: #e7f3ff;
+        border-left: 5px solid #003366;
+        padding: 10px 15px;
+        margin: 15px 0;
+        font-style: italic;
+      }
+
+      /* Data tables */
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+        background-color: #fff;
+      }
+
+      .data-table th {
+        background-color: #003366;
+        color: #fff;
+        padding: 10px;
+        border: 1px solid #000;
+        font-family: Arial, sans-serif;
+        text-align: left;
+      }
+
+      .data-table td {
+        padding: 10px;
+        border: 1px solid #999;
+        vertical-align: top;
+      }
+
+      .data-table tr:nth-child(even) {
+        background-color: #f0f0e8;
+      }
+
+      /* Links */
+      a {
+        color: #003366;
+      }
+
+      a:visited {
+        color: #660066;
+      }
+
+      a:hover {
+        color: #990000;
+      }
+
+      /* Lists */
+      ul {
+        margin: 10px 0;
+      }
+
+      li {
+        margin: 5px 0;
+      }
+
+      /* Horizontal rule */
+      hr {
+        border: none;
+        border-top: 2px solid #003366;
+        margin: 30px 0;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: #003366;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        font-size: 12px;
+        border-top: 4px solid #001a33;
+      }
+
+      .footer a {
+        color: #ffcc00;
+      }
+
+      /* Day box */
+      .day-box {
+        border: 2px solid #003366;
+        margin: 20px 0;
+        background-color: #fafaf5;
+      }
+
+      .day-header {
+        background-color: #003366;
+        color: #fff;
+        padding: 10px 15px;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+      }
+
+      .day-content {
+        padding: 15px;
+      }
+
+      .day-stats {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+      }
+
+      /* Pro tip */
+      .pro-tip {
+        background-color: #fff8dc;
+        border: 1px dashed #996600;
+        padding: 8px 12px;
+        margin: 10px 0;
+        font-size: 14px;
+      }
+
+      .pro-tip strong {
+        color: #996600;
+      }
+
+      /* Contact info */
+      .contact-box {
+        background-color: #f0f8ff;
+        border: 2px solid #003366;
+        padding: 15px;
+        margin: 20px 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Checklist table */
+      .checklist-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+      }
+
+      .checklist-table td {
+        padding: 5px 10px;
+        border-bottom: 1px dotted #999;
+      }
+
+      .checklist-table td:first-child {
+        width: 20px;
+        text-align: center;
+      }
+
+      /* Back to top link */
+      .back-to-top {
+        text-align: right;
+        font-size: 12px;
+        margin-top: 20px;
+      }
+      .back-to-top a {
+        color: #666;
+        text-decoration: none;
+      }
+      .back-to-top a:hover {
+        color: #003366;
+        text-decoration: underline;
+      }
+
+      /* Difficulty badge */
+      .difficulty-easy {
+        background-color: #336633;
+        color: #fff;
+        padding: 2px 6px;
+        font-size: 10px;
+        font-family: Arial, sans-serif;
+      }
+      .difficulty-hard {
+        background-color: #996600;
+        color: #fff;
+        padding: 2px 6px;
+        font-size: 10px;
+        font-family: Arial, sans-serif;
+      }
+      .difficulty-extreme {
+        background-color: #990000;
+        color: #fff;
+        padding: 2px 6px;
+        font-size: 10px;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Quick start box */
+      .quick-start {
+        background-color: #003366;
+        color: #fff;
+        padding: 20px;
+        margin-bottom: 25px;
+        border: 3px solid #001a33;
+      }
+      .quick-start h3 {
+        color: #ffcc00;
+        margin: 0 0 15px 0;
+        font-family: Arial, sans-serif;
+      }
+      .quick-start table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .quick-start td {
+        padding: 8px;
+        color: #fff;
+        border-bottom: 1px solid #335577;
+        vertical-align: top;
+      }
+      .quick-start td:first-child {
+        font-weight: bold;
+        width: 120px;
+        color: #ccc;
+      }
+
+      /* Route comparison mini-table */
+      .route-compare {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 14px;
+      }
+      .route-compare th {
+        background-color: #003366;
+        color: #fff;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+        text-align: left;
+      }
+      .route-compare td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        vertical-align: top;
+      }
+      .route-compare tr:nth-child(even) {
+        background-color: #f5f5dc;
+      }
+
+      /* Mobile responsiveness */
+      @media screen and (max-width: 768px) {
+        .sidebar {
+          display: none;
+        }
+        .main-content {
+          padding: 15px;
+        }
+        .header h1 {
+          font-size: 22px;
+        }
+        .data-table,
+        .checklist-table,
+        .route-compare {
+          font-size: 12px;
+        }
+        .data-table th,
+        .data-table td,
+        .checklist-table th,
+        .checklist-table td {
+          padding: 6px;
+        }
+        .day-box {
+          margin: 10px 0;
+        }
+        .quick-start td:first-child {
+          width: 80px;
+        }
+      }
+
+      /* Print styles */
+      @media print {
+        .sidebar {
+          display: none;
+        }
+        .header {
+          padding: 10px;
+        }
+        .footer {
+          display: none;
+        }
+        .back-to-top {
+          display: none;
+        }
+        body {
+          background-color: #fff;
+        }
+        .main-content {
+          padding: 0;
+        }
+      }
+
+      /* Last updated */
+      .last-updated {
+        font-size: 10px;
+        color: #999;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Header -->
+      <div class="header">
+        <h1>&#9660; THE WILD BLUE TREK &#9660;</h1>
+        <h1>SELVAGGIO BLU</h1>
+        <p>
+          A Complete Self-Guided Adventure Guide for Sardinia's Most Challenging
+          Trek
+        </p>
+      </div>
+
+      <!-- Main Layout -->
+      <table class="layout-table" cellspacing="0" cellpadding="0">
+        <tr>
+          <!-- Sidebar -->
+          <td class="sidebar">
+            <div class="sidebar-inner">
+              <h3>&#9776; Pages</h3>
+              <ul>
+                <li class="page-link current-page">
+                  <a href="index.html">&#9658; Trek Guide</a>
+                </li>
+                <li class="page-link">
+                  <a href="about.html">&#9658; About This Project</a>
+                </li>
+              </ul>
+
+              <div class="nav-divider"></div>
+
+              <h3>&#9679; Variants</h3>
+              <ul>
+                <li
+                  style="
+                    background-color: #d4edda;
+                    border-bottom: 1px dotted #999;
+                  "
+                >
+                  <a href="variant-short.html" style="color: #336633"
+                    >&#9658; Short Version<br /><span
+                      style="font-size: 9px; color: #666"
+                      >&#9734; Easy &bull; No ropes</span
+                    ></a
+                  >
+                </li>
+                <li
+                  style="
+                    background-color: #ffe6e6;
+                    border-bottom: 1px dotted #999;
+                  "
+                >
+                  <a href="variant-extended.html" style="color: #990000"
+                    >&#9658; Extended Route<br /><span
+                      style="font-size: 9px; color: #666"
+                      >&#9733;&#9733;&#9733; Extreme</span
+                    ></a
+                  >
+                </li>
+              </ul>
+
+              <div class="nav-divider"></div>
+
+              <h3>&#9679; Sections</h3>
+              <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#warning">Warning</a></li>
+                <li><a href="#logistics">Logistics</a></li>
+                <li><a href="#route">The Route</a></li>
+                <li><a href="#variants">Variants</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#kit">Kit List</a></li>
+                <li><a href="#ropes">Rope Descents</a></li>
+                <li><a href="#clothing">Clothing</a></li>
+                <li><a href="#food">Food</a></li>
+                <li><a href="#safety">Safety Tips</a></li>
+                <li><a href="#resources">Resources</a></li>
+              </ul>
+            </div>
+          </td>
+
+          <!-- Main Content -->
+          <td class="main-content">
+            <!-- Quick Start Summary -->
+            <div class="quick-start">
+              <h3>&#9733; QUICK START SUMMARY</h3>
+              <table>
+                <tr>
+                  <td>Route:</td>
+                  <td>
+                    Santa Maria Navarrese &rarr; Pedra Longa &rarr; Cala
+                    Goloritz&egrave; &rarr; Cala Sisine
+                  </td>
+                </tr>
+                <tr>
+                  <td>Duration:</td>
+                  <td>4-5 days (classic route)</td>
+                </tr>
+                <tr>
+                  <td>Difficulty:</td>
+                  <td>
+                    <span class="difficulty-extreme">EXTREME</span> &mdash; T6
+                    hiking, 8 rappels (up to 50m), exposed terrain
+                  </td>
+                </tr>
+                <tr>
+                  <td>Best Season:</td>
+                  <td>April-May or September-October (avoid summer heat)</td>
+                </tr>
+                <tr>
+                  <td>Cost:</td>
+                  <td>
+                    &euro;300-500 self-organized vs &euro;1,500-2,000 guided
+                  </td>
+                </tr>
+                <tr>
+                  <td>Required:</td>
+                  <td>
+                    Rappelling experience, GPS navigation, multi-day trekking
+                    skills
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- Introduction Section -->
+            <a name="intro"></a>
+            <h2>&#9679; The Wild Blue Trek on Your Own</h2>
+
+            <p>
+              The Selvaggio Blu is one of
+              <strong>Europe's most challenging and rewarding treks</strong>,
+              winding through the dramatic limestone cliffs and hidden coves of
+              Sardinia's Gulf of Orosei. This guide is designed to help
+              experienced trekkers tackle the route
+              <strong>independently</strong>, without the need for expensive
+              guided tours.
+            </p>
+
+            <p>
+              With proper preparation, the right skills, and attention to
+              detail, completing the Selvaggio Blu on your own is an achievable
+              goal.
+              <strong>Anyone capable should push beyond the known</strong>
+              &mdash; rediscover the taste of adventure, of getting lost, of
+              finding oneself again, and of devising ingenious solutions.
+            </p>
+
+            <hr />
+
+            <!-- Warning Section -->
+            <a name="warning"></a>
+            <div class="warning-box">
+              <h3>&#9888; IMPORTANT WARNING &#9888;</h3>
+              <p>
+                The Selvaggio Blu is an <strong>extreme trek</strong>. If you
+                have never done a solo trek, have no climbing experience, and do
+                not know how to manage <strong>rappel descents</strong>, it is
+                strongly recommended to hire an experienced local guide.
+              </p>
+              <p>
+                Taking for granted that anyone who wants to embark on this
+                adventure has the physical abilities to walk on extremely
+                aggressive terrain for at least four consecutive days, the
+                challenges are not limited to muscle strength. To successfully
+                complete the Selvaggio Blu, you need much more.
+              </p>
+            </div>
+
+            <p>
+              First and foremost:
+              <strong>organization and attention to detail</strong>. These are
+              the fundamental points we will examine in detail:
+            </p>
+
+            <ul>
+              <li>
+                <strong>The Route:</strong> Learn the daily stages and the
+                difficulties of the path
+              </li>
+              <li>
+                <strong>Booking:</strong> Communicate and book your excursion
+                with the municipality of Baunei
+              </li>
+              <li><strong>Kit List:</strong> Select the proper equipment</li>
+              <li>
+                <strong>Rope Descents:</strong> Know the details and how to use
+                the equipment
+              </li>
+              <li>
+                <strong>Clothing:</strong> Carefully choose the minimum
+                necessary clothing
+              </li>
+              <li>
+                <strong>Food:</strong> Precisely calculate the amount of water
+                and food needed for all days
+              </li>
+              <li>
+                <strong>Safety Tips:</strong> Essential advice for your security
+              </li>
+            </ul>
+
+            <hr />
+
+            <!-- Logistics Section -->
+            <a name="logistics"></a>
+            <h2>&#9679; Logistics Service</h2>
+
+            <p>
+              One thing is doing the Selvaggio Blu without a guide, committing
+              to finding the route without getting lost. Another thing entirely
+              is walking for days on rocky terrain and exposed passages with a
+              <strong>heavy and bulky backpack</strong> loaded with rope,
+              harness, helmet, tent, sleeping bag, clothes, and most importantly
+              water, food, and various cookware.
+            </p>
+
+            <div class="info-box">
+              <h4>&#128167; The Water Problem</h4>
+              <p>
+                You may have read or heard that the biggest problem on the
+                Selvaggio Blu is <strong>getting water</strong>. Along the
+                entire route, there are no natural supply points, except for the
+                <strong>S'Erriu Mortu river</strong> (at the beginning of the
+                first day) and the <strong>Grotta dell'Acqua</strong> (Water
+                Cave, on the third day). But these are not 100% reliable.
+              </p>
+              <p>
+                ...and you need a LOT of water: at least
+                <strong>3 liters per person during the day</strong>, plus water
+                for cooking. If you want to save water, the Selvaggio Blu will
+                no longer be just a trek but a true survival test.
+              </p>
+            </div>
+
+            <p>
+              So, unless the goal is to join the Marines, it is advisable
+              <strong>not to skimp</strong> but to request logistics support.
+              Lightening the load and having food and water delivered daily is
+              highly recommended. Even better:
+              <strong>two daily deliveries</strong>:
+            </p>
+
+            <ul>
+              <li>
+                <strong>Evening delivery:</strong> Water, dinner, and luggage
+              </li>
+              <li>
+                <strong>Morning pickup:</strong> Take away luggage and trash, so
+                you can walk light
+              </li>
+            </ul>
+
+            <div class="contact-box">
+              <strong
+                >&#9993; Request Logistics Support for the Selvaggio Blu</strong
+              ><br /><br />
+              Contact a local logistics provider to arrange daily food, water,
+              and luggage transport along the route.
+            </div>
+
+            <hr />
+
+            <!-- Route Section -->
+            <a name="route"></a>
+            <h2>&#9679; The Route of the Selvaggio Blu</h2>
+
+            <p>
+              Despite the countless variants to the path, the original Selvaggio
+              Blu route is considered to be only one:
+              <strong>the one established in 1987</strong>. The possible
+              variants are numerous, but they should always be understood as
+              variants to the original route.
+            </p>
+
+            <p>
+              The original route was divided into
+              <strong>four daily stages</strong>, and this is the fastest
+              solution. Those who have never done the Selvaggio Blu often make
+              the mistake of presumption, and looking at the daily kilometers,
+              they think they can complete it in three days or even less.
+              <strong>Do not make the same mistake.</strong> The route is not
+              easy to find, and even knowing it, the speed is always very slow.
+            </p>
+
+            <h3>...and why is it so difficult?</h3>
+
+            <p>
+              Unfortunately, in the Supramonte, the distance between two points
+              and the elevation are not as relevant as the
+              <strong>type of terrain</strong>. If you want to do the Selvaggio
+              Blu independently &mdash; beyond the difficulty in finding the
+              correct passages &mdash; you must be ready to face easy climbing
+              sections, exposed traverses, and rope descents.
+            </p>
+
+            <div class="tip-box">
+              If you only consider distance and elevation, the second day might
+              seem like an easy downhill walk. But it's not. The Sisiera descent
+              and the Tenadili canyon are so challenging that they can take
+              hours and put even the most trained in difficulty.
+            </div>
+
+            <p>
+              Experienced guides know how long it takes to walk between one
+              point and another. This is learned in the field, and it is the
+              only data that matters: <strong>time</strong>. Distance in the
+              Supramonte is secondary.
+            </p>
+
+            <h3>Selvaggio Blu: 4 or 5 Days?</h3>
+
+            <p>
+              If well trained, you can complete the Selvaggio Blu in
+              <strong>4 days</strong>. Below is the usual table with the most
+              beautiful stages.
+            </p>
+
+            <p>
+              For first-timers,
+              <strong>planning for five days</strong> is recommended. Many
+              people attempt it in 3 days, but the success rate is very low. To
+              enjoy the trail and not spend the vacation in anxiety, plan to do
+              it in five days.
+            </p>
+
+            <p>
+              Consider that on the first day trekkers might arrive at Pedra
+              Longa late, or be tired from the previous evening's travel.
+              Starting "full throttle" is not ideal and not at all relaxing.
+              Assuming this is a vacation, an adventure to fully enjoy, taking
+              it with the necessary calm and planning the route in five days is
+              advisable.
+            </p>
+
+            <div class="info-box">
+              <h4>&#128205; GPX Track Essential</h4>
+              <p>
+                A reliable GPX track is the most important resource for the
+                success of an independent adventure on the Selvaggio Blu.
+              </p>
+              <ul>
+                <li>
+                  <strong>Expert Navigation:</strong> Avoid getting lost using
+                  tracks, precise waypoints, and detailed route information
+                </li>
+                <li>
+                  <strong>Campsite Information:</strong> Look for tracks that
+                  include hard-to-find official campsites
+                </li>
+                <li>
+                  <strong>Updated Information:</strong> Ensure the track is
+                  recently updated with the most recent trail conditions and any
+                  changes
+                </li>
+              </ul>
+            </div>
+
+            <!-- Day by Day Route -->
+            <h3>Day-by-Day Route Breakdown</h3>
+
+            <div class="day-box">
+              <div class="day-header">DAY 1: Pedra Longa to Portu Pedrosu</div>
+              <div class="day-content">
+                <div class="day-stats">
+                  &#128099; 13 km &nbsp;&nbsp;|&nbsp;&nbsp; &#9650; +990 m
+                  &nbsp;&nbsp;|&nbsp;&nbsp; &#9660; -1050 m
+                </div>
+                <p>
+                  <strong>Critical Points:</strong> The climb on the Giradili
+                  ledge remains exposed to the sun and can make you consume more
+                  water than expected. The descent from Ginnirco is very
+                  demanding due to the rocky terrain and the difficulty in
+                  finding the trail.
+                </p>
+              </div>
+            </div>
+
+            <div class="day-box">
+              <div class="day-header">
+                DAY 2: Portu Pedrosu to S'Arcu 'e Su Tasaru
+              </div>
+              <div class="day-content">
+                <div class="day-stats">
+                  &#128099; 15 km &nbsp;&nbsp;|&nbsp;&nbsp; &#9650; +1330 m
+                  &nbsp;&nbsp;|&nbsp;&nbsp; &#9660; -860 m
+                </div>
+                <p>
+                  <strong>Critical Points:</strong> Long day. Entry and exit
+                  from Bacu Tenadili are demanding and require a lot of time.
+                  Better to go through Masadorgittala.
+                </p>
+              </div>
+            </div>
+
+            <div class="day-box">
+              <div class="day-header">
+                DAY 3: S'Arcu 'e su Tasaru to Bacu Padente
+              </div>
+              <div class="day-content">
+                <div class="day-stats">
+                  &#128099; 8 km &nbsp;&nbsp;|&nbsp;&nbsp; &#9650; +670 m
+                  &nbsp;&nbsp;|&nbsp;&nbsp; &#9660; -850 m
+                </div>
+                <p>
+                  <strong>Critical Points:</strong> Countless challenges, beyond
+                  the usual orientation difficulty. Dangerous rockfield before
+                  the Mudaloru descent, management of four rope descents,
+                  finding the exit from the bottom of Bacu Padente.
+                </p>
+              </div>
+            </div>
+
+            <div class="day-box">
+              <div class="day-header">DAY 4: Bacu Padente to Sisine</div>
+              <div class="day-content">
+                <div class="day-stats">
+                  &#128099; 7 km &nbsp;&nbsp;|&nbsp;&nbsp; &#9650; +820 m
+                  &nbsp;&nbsp;|&nbsp;&nbsp; &#9660; -1070 m
+                </div>
+                <p>
+                  <strong>Critical Points:</strong> Management of four rope
+                  descents, up to 50 meters. Via ferrata of Plumare.
+                </p>
+              </div>
+            </div>
+
+            <h3>&#9733; Famous Beaches Along the Route</h3>
+
+            <p>
+              The Selvaggio Blu traverses some of the Mediterranean's most
+              spectacular beaches, accessible only on foot or by boat. These are
+              not just rest stops &mdash; they are among Italy's most celebrated
+              natural wonders.
+            </p>
+
+            <table class="data-table">
+              <tr>
+                <th>Beach</th>
+                <th>Description</th>
+                <th>On Route</th>
+              </tr>
+              <tr>
+                <td><strong>Pedra Longa</strong></td>
+                <td>
+                  Iconic 128m rock spire at the start. Small restaurant
+                  available. Last guaranteed food before the wilderness.
+                </td>
+                <td>Day 1 start</td>
+              </tr>
+              <tr>
+                <td><strong>Cala Goloritz&egrave;</strong></td>
+                <td>
+                  UNESCO World Heritage site. Crystal-clear turquoise waters
+                  with the famous "Aguglia" needle rising 143m from the sea.
+                  Often ranked among Italy's most beautiful beaches. Limestone
+                  arch formations.
+                </td>
+                <td>Day 3-4</td>
+              </tr>
+              <tr>
+                <td><strong>Cala Sisine</strong></td>
+                <td>
+                  Classic route endpoint. Dramatic fjord-like inlet surrounded
+                  by limestone cliffs. White pebble beach with seasonal
+                  bar/restaurant. Boat pickup available here.
+                </td>
+                <td>Day 4 end</td>
+              </tr>
+            </table>
+
+            <div class="tip-box">
+              <strong>Extended Route:</strong> For those seeking more, the route
+              can continue beyond Sisine to <strong>Cala Luna</strong> &mdash; a
+              legendary crescent beach with caves &mdash; and onward to
+              <strong>Cala Gonone</strong>. See the
+              <a href="variant-extended.html">Extended Route variant</a> for
+              details.
+            </div>
+
+            <hr />
+
+            <!-- Variants Section -->
+            <a name="variants"></a>
+            <h2>&#9679; Route Variants</h2>
+
+            <p>Choose the route that matches your skills and available time:</p>
+
+            <table class="route-compare">
+              <tr>
+                <th>Variant</th>
+                <th>Duration</th>
+                <th>Difficulty</th>
+                <th>Rappelling</th>
+                <th>Best For</th>
+              </tr>
+              <tr>
+                <td>
+                  <strong><a href="index.html">Classic Route</a></strong>
+                </td>
+                <td>4-5 days</td>
+                <td><span class="difficulty-extreme">Extreme</span></td>
+                <td>8 rappels (up to 50m)</td>
+                <td>Experienced climbers seeking the full adventure</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong
+                    ><a href="variant-short.html">Short Version</a></strong
+                  >
+                </td>
+                <td>2-3 days</td>
+                <td><span class="difficulty-easy">Moderate</span></td>
+                <td>None required</td>
+                <td>Hikers without rope skills</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong
+                    ><a href="variant-extended.html">Extended Route</a></strong
+                  >
+                </td>
+                <td>5 days</td>
+                <td><span class="difficulty-extreme">Extreme+</span></td>
+                <td>8+ rappels (up to 45m)</td>
+                <td>Advanced trekkers wanting Cala Luna &amp; Cala Gonone</td>
+              </tr>
+            </table>
+
+            <hr />
+
+            <h3>Classic Route Variants</h3>
+            <p>Within the classic route, several passage variations exist:</p>
+
+            <h4>a. Boladina Variant</h4>
+            <p>
+              To climb up from Goloritz&egrave;, Verin and Cicalo identified a
+              very obvious passage at the base of the Bacu Boladina canyon. Bacu
+              Boladina is, or was,
+              <strong
+                >the most difficult and dangerous passage of the entire
+                Selvaggio Blu</strong
+              >. It involves a climbing section protected by an old steel cable
+              about 15 meters long, with an overhanging start. This is followed
+              by a debris channel (rockfield) 2 m wide and about 30 m long with
+              a 45&deg; slope. At the end of the channel, a carved log helps
+              climb a 5 m high wall.
+            </p>
+
+            <p>
+              If the group is small and well trained, it is possible to try it,
+              but
+              <strong
+                >the recommended option is the Masadorgittala variant</strong
+              >.
+            </p>
+
+            <div class="tip-box">
+              The Masadorgittala variant was re-equipped in 2019, retracing a
+              passage already known to local shepherds. The variant starts from
+              the classic path that descends from Su Porteddu and climbs a
+              rockfield to the beginning of a very exposed rock spur. This is
+              currently equipped with stainless steel rings and a fixed rope of
+              about 30 m. For this passage, a harness and via ferrata set are
+              sufficient.
+            </div>
+
+            <h3>b. Mariolu Variant</h3>
+            <p><em>[Detailed information available upon request]</em></p>
+
+            <h3>c. Biriala Variant</h3>
+            <p><em>[Detailed information available upon request]</em></p>
+
+            <hr />
+
+            <!-- Booking Section -->
+            <a name="booking"></a>
+            <h2>&#9679; Booking the Selvaggio Blu</h2>
+
+            <p>
+              Since 2018, the municipality of Baunei has required
+              <strong>mandatory registration</strong> at a dedicated office, and
+              payment of a <strong>&euro;30 fee per person</strong>. You must
+              contact them to let them know your chosen itinerary, the dates you
+              wish to do it, and how many you are.
+            </p>
+
+            <h3>Why Pay for the Selvaggio Blu?</h3>
+
+            <p>
+              The municipal ordinance has brought significant improvements to
+              the trail experience. Here is how things have changed:
+            </p>
+
+            <table class="data-table">
+              <tr>
+                <th width="50%">BEFORE the Ordinance</th>
+                <th width="50%">AFTER the Ordinance</th>
+              </tr>
+              <tr>
+                <td>
+                  Trash was abandoned everywhere along the route, requiring
+                  trekkers to carry extra bags to collect litter.
+                </td>
+                <td>
+                  This is no longer necessary, as camps are limited and
+                  monitored. Logistics services now take care of removing trash.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Groups had to rush to arrive at camp before others and occupy
+                  enough tent spaces, creating competition and tension.
+                </td>
+                <td>
+                  Trekkers can enjoy the itinerary without haste, as camps are
+                  assigned by the municipality, eliminating overcrowding and
+                  competition between groups. Assigned spots are guaranteed
+                  regardless of arrival time.
+                </td>
+              </tr>
+            </table>
+
+            <p>
+              The €30 fee supports trail maintenance, camp management, and
+              environmental protection of this unique natural area.
+            </p>
+
+            <div class="contact-box">
+              <h4>&#9993; How to Book</h4>
+              <p>
+                Before departing, you must send an email to:
+                <strong
+                  ><a href="mailto:selvaggioblu@turismobaunei.eu"
+                    >selvaggioblu@turismobaunei.eu</a
+                  ></strong
+                >
+              </p>
+              <p>Include the following information:</p>
+              <ul>
+                <li>
+                  Name, surname, phone number, and email of the group leader
+                </li>
+                <li>Which days you intend to travel the Selvaggio Blu</li>
+                <li>Which camps you wish to stay at overnight</li>
+                <li>Number of participants</li>
+                <li>If applicable, which company provides your logistics</li>
+              </ul>
+              <p>
+                <strong>Note:</strong> The Mariolu and Biriala camps can only be
+                booked by groups led by Alpine Guides or Environmental Hiking
+                Guides.
+              </p>
+            </div>
+
+            <p>
+              Once the municipality responds approving or modifying your plan,
+              you can pay the <strong>&euro;30 per person fee</strong> by bank
+              transfer within one week of departure. The confirmation email from
+              the municipality and the payment receipt will be the documents you
+              must show at the entrance of Goloritz&egrave;, or in case of
+              inspection by local police.
+            </p>
+
+            <p>
+              If you need to modify your itinerary at the last minute due to bad
+              weather or other force majeure, you must contact the office by
+              email, or at:
+            </p>
+
+            <p style="text-align: center; font-size: 18px">
+              <strong>&#9742; +39 349 546 2583</strong><br /><span
+                style="font-size: 14px"
+                >(Mon-Fri 10:00-13:00 and 15:00-16:00)</span
+              >
+            </p>
+
+            <hr />
+
+            <!-- Kit List Section -->
+            <a name="kit"></a>
+            <h2>&#9679; Complete Kit List</h2>
+
+            <p>
+              The equipment list will differ depending on whether you use
+              logistics support or not. With logistics support, you can afford
+              to bring more things without strict weight limits. The following
+              list is designed for those who will use this service.
+            </p>
+
+            <h3>&#9978; Sleeping Gear</h3>
+            <table class="checklist-table">
+              <tr>
+                <td>&#9744;</td>
+                <td>Tent (but it's possible to do without)</td>
+              </tr>
+              <tr>
+                <td>&#9744;</td>
+                <td>Sleeping bag (3 seasons, 0/+5 &deg;C)</td>
+              </tr>
+              <tr>
+                <td>&#9744;</td>
+                <td>Inflatable sleeping pad and repair kit</td>
+              </tr>
+              <tr>
+                <td>&#9744;</td>
+                <td>Inflatable pillow</td>
+              </tr>
+            </table>
+
+            <h3>&#9978; Rope Descent Equipment</h3>
+            <table class="checklist-table">
+              <tr>
+                <td>&#9744;</td>
+                <td>Helmet</td>
+              </tr>
+              <tr>
+                <td>&#9744;</td>
+                <td>Harness</td>
+              </tr>
+              <tr>
+                <td>&#9744;</td>
+                <td>Carabiners and descenders</td>
+              </tr>
+              <tr>
+                <td>&#9744;</td>
+                <td>Slings and cords</td>
+              </tr>
+            </table>
+
+            <h3>&#9978; Cooking Gear</h3>
+            <table class="checklist-table">
+              <tr>
+                <td>&#9744;</td>
+                <td>Camping stove and gas cartridge</td>
+              </tr>
+              <tr>
+                <td>&#9744;</td>
+                <td>Lighter</td>
+              </tr>
+              <tr>
+                <td>&#9744;</td>
+                <td>Pot and lid</td>
+              </tr>
+              <tr>
+                <td>&#9744;</td>
+                <td>Plate (metal or washable plastic)</td>
+              </tr>
+              <tr>
+                <td>&#9744;</td>
+                <td>Cup (metal or washable plastic)</td>
+              </tr>
+              <tr>
+                <td>&#9744;</td>
+                <td>Fork, spoon, and knife</td>
+              </tr>
+              <tr>
+                <td>&#9744;</td>
+                <td>Trash bags (separate aluminum, plastic, and paper)</td>
+              </tr>
+              <tr>
+                <td>&#9744;</td>
+                <td>Salt, oil, sugar, etc.</td>
+              </tr>
+            </table>
+
+            <hr />
+
+            <!-- Rope Descents Section -->
+            <a name="ropes"></a>
+            <h2>&#9679; Rope Descents (Rappels)</h2>
+
+            <p>
+              To complete the Selvaggio Blu without a guide, and without
+              cheating, it is necessary to descend along some rock walls with
+              the help of rope and harness. The original Selvaggio Blu route
+              includes <strong>eight rope descents</strong>, four on the
+              second-to-last day and four on the last day.
+            </p>
+
+            <div class="info-box">
+              All anchors were replaced in 2023 with new resin-bonded anchor
+              groups, in 316L marine-grade stainless steel. Many of the anchors
+              have also been doubled to avoid bottlenecks.
+            </div>
+
+            <p>
+              Some of the rope descents can be avoided if you know the secret
+              shepherd passages or the shortcuts that bypass them. In the
+              downloadable GPX track, you will also find references to these
+              alternatives.
+            </p>
+
+            <h3>Day 4: From S'Arcu 'e su Tasaru to Bacu Padente</h3>
+
+            <table class="data-table">
+              <tr>
+                <th width="15%">Descent</th>
+                <th width="15%">Length</th>
+                <th>Description &amp; Pro Tips</th>
+              </tr>
+              <tr>
+                <td><strong>#1</strong></td>
+                <td>20 meters</td>
+                <td>
+                  Found at the bottom of the long descent on the Su Pentrosu
+                  rockfield.
+                  <div class="pro-tip">
+                    <strong>PRO TIP:</strong> People often make a mistake here,
+                    taking the new 45-meter variant. Remember that after passing
+                    through the hole in the rock and downclimbing the small
+                    corner, you must immediately turn right, continuing under
+                    the wall. If you go straight from the corner, you'll reach
+                    the 45-meter descent.
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>#2</strong></td>
+                <td>20 meters</td>
+                <td>
+                  Found at the base of the Grotta Cinque Stelle (Five Star
+                  Cave). Very easy to find.
+                  <div class="pro-tip">
+                    <strong>PRO TIP:</strong> If this one is occupied by other
+                    groups, it's possible to find another anchor positioned
+                    about 50 meters further south.
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>#3</strong></td>
+                <td>25 meters</td>
+                <td>
+                  A rope on juniper, on top of the spur overlooking the Grotta
+                  del Fico (Fig Cave).
+                  <div class="pro-tip">
+                    <strong>PRO TIP:</strong> This descent can be avoided by
+                    climbing the spur and finding the old shepherd passage on an
+                    old Iscala 'e Fustes (wooden ladder). This alternative is
+                    unprotected, must be equipped, and is not recommended for
+                    inexperienced trekkers.
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>#4</strong></td>
+                <td>20 meters</td>
+                <td>
+                  Located on the left edge of the Arco de su Feilau. Recently
+                  bolted with two separate rings.
+                  <div class="pro-tip">
+                    <strong>PRO TIP:</strong> This descent can also be avoided
+                    by traversing the narrow ledge below and descending an old
+                    log leaning against the rock.
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+            <h3>Day 5: From Bacu Padente to Sisine</h3>
+
+            <table class="data-table">
+              <tr>
+                <th width="15%">Descent</th>
+                <th width="15%">Length</th>
+                <th>Description &amp; Pro Tips</th>
+              </tr>
+              <tr>
+                <td><strong>#5</strong></td>
+                <td>25 meters</td>
+                <td>
+                  Immediately after the diaclase known as Sa Nurca 'e Piddi.
+                  Rope on juniper. The rope is divided into two sections, with
+                  two quick links to allow two groups to descend simultaneously.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>#6</strong></td>
+                <td>45 meters</td>
+                <td>
+                  Immediately after the previous one.
+                  <strong
+                    >This is the longest descent of the Selvaggio Blu.</strong
+                  >
+                  Two anchor groups have been installed to again allow
+                  simultaneous descent of two groups.
+                  <div class="pro-tip">
+                    <strong>PRO TIP:</strong> Midway down the wall there is an
+                    intermediate anchor, which allows you to use a single
+                    60-meter rope by splitting the descent.
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>#7</strong></td>
+                <td>34 meters</td>
+                <td>
+                  Right after the Plumare rockslide and the Plumare Via Ferrata.
+                  The main anchor is preceded by a fixed rope. You can attempt
+                  this descent with a 60-meter half dynamic rope, but know that
+                  at the last meter the rope will run out and you'll have to
+                  downclimb or jump. Organize yourselves so you don't lose the
+                  rope.
+                  <div class="pro-tip">
+                    <strong>PRO TIP:</strong> When retrieving the rope, it often
+                    gets stuck in a small crack 15 meters up. To avoid this,
+                    give it a sharp tug when it's about to exit the ring.
+                  </div>
+                  <div class="pro-tip">
+                    <strong>PRO TIP:</strong> 10 meters above this anchor there
+                    is a second anchor equipped with rope on holm oak (40
+                    meters). Do not follow the fixed rope beyond the anchor
+                    because it leads nowhere.
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>#8</strong></td>
+                <td>20 meters</td>
+                <td>
+                  Last descent with a view of Sisine beach, preceded by a fixed
+                  rope.
+                  <div class="pro-tip">
+                    <strong>PRO TIP:</strong> There is another anchor (20
+                    meters). To reach it, you must stop 30 meters before the
+                    official anchor, just before overlooking the beach, descend
+                    and find a narrow passage created between the bushes.
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+            <hr />
+
+            <!-- Clothing Section -->
+            <a name="clothing"></a>
+            <h2>&#9679; Clothing</h2>
+
+            <p>
+              We know well what the usual mistake is:
+              <strong>bringing too many things</strong>. Know that you will
+              smell, so make peace with this idea and take as little as
+              possible:
+            </p>
+
+            <ul>
+              <li>
+                The shirt you're wearing on the first day, and
+                <strong>at most two changes</strong>
+              </li>
+              <li>
+                The pants you're wearing and <strong>at most one change</strong>
+              </li>
+              <li>A light fleece for the evening if in spring</li>
+              <li>A lightweight down jacket</li>
+              <li>A rain jacket</li>
+              <li>Socks and underwear, and that's it</li>
+            </ul>
+
+            <div class="warning-box">
+              <h3>&#9888; Avoid Useless Accessories</h3>
+              <p>
+                Avoid useless accessories that fill the backpack and create
+                confusion:
+              </p>
+              <ul>
+                <li>NO gloves</li>
+                <li>NO beanies</li>
+                <li>NO pajamas</li>
+                <li>NO cloth towels</li>
+                <li>NO bulky jackets</li>
+              </ul>
+              <p>
+                <strong>Choose old clothes</strong>, because the junipers of the
+                Supramonte enjoy tearing new clothes.
+              </p>
+            </div>
+
+            <h3>Jacket</h3>
+            <p>
+              The best combo is a
+              <strong>lightweight and very compact down jacket</strong> + a
+              <strong>2.5-layer rain jacket</strong> that is also very light and
+              compact.
+            </p>
+
+            <p>
+              The only downside of down is that if it gets wet, it loses its
+              thermal insulation property, and the feathers can rot. For this
+              reason, it should always be accompanied by a rain jacket.
+            </p>
+
+            <h3>Shoes</h3>
+            <p>
+              Regarding footwear,
+              <strong>here it's better to have something really good</strong>.
+              The minimum is approach shoes, models like:
+            </p>
+            <ul>
+              <li>La Sportiva TX4</li>
+              <li>Scarpa Mescalito</li>
+              <li>Salewa Alp Trainer</li>
+              <li>Dolomite Crodarossa</li>
+            </ul>
+            <p>Or higher and more robust shoes, but know that it gets hot...</p>
+
+            <hr />
+
+            <!-- Food Section -->
+            <a name="food"></a>
+            <h2>&#9679; Food</h2>
+
+            <p>
+              Here we need to make a separation between those who need coffee
+              and pasta, and those who can do without.
+              <strong
+                >Giving up caffeine and hot foods simplifies everything.</strong
+              >
+              You can abandon the stove, pot, dish soap, and water for cooking
+              and cleaning.
+            </p>
+
+            <p>
+              In any case, <strong>avoiding food in oil</strong> is recommended,
+              as once opened, the oil will spread everywhere, even anticipating
+              your moves.
+            </p>
+
+            <h3>&#127860; Diet WITHOUT a Stove</h3>
+
+            <table class="data-table">
+              <tr>
+                <th>Meal</th>
+                <th>Suggestions</th>
+              </tr>
+              <tr>
+                <td><strong>Breakfast</strong></td>
+                <td>
+                  A pack of oats and UHT milk, enriched with fruit and nuts, and
+                  plenty of water to drink. Or simply cookies and water.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Lunch</strong></td>
+                <td>
+                  Bread (the spianata from Ozieri is the best), aged cheese,
+                  dried meat (sausage, ham...), nuts, fruit and vegetables.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Dinner</strong></td>
+                <td>
+                  To spend an evening with friends around a small fire, you can
+                  buy pieces of meat to roast with an improvised spit (juniper
+                  twig). On the same fire, you can heat canned food like lentils
+                  or cook potatoes and onions. And then, like at lunch: bread,
+                  cheese, fruit and vegetables (oranges with fennel are so
+                  good!).
+                </td>
+              </tr>
+            </table>
+
+            <h3>&#127860; Diet WITH a Stove</h3>
+
+            <p>
+              For those who need morning coffee or other hot drinks, or simply
+              prefer cooking pasta or pre-cooked foods, the choices expand
+              immensely:
+            </p>
+
+            <table class="data-table">
+              <tr>
+                <th>Meal</th>
+                <th>Suggestions</th>
+              </tr>
+              <tr>
+                <td><strong>Breakfast</strong></td>
+                <td>
+                  Coffee or tea, accompanied by cookies, or bread and jam.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Lunch</strong></td>
+                <td>Same as the no-stove list above.</td>
+              </tr>
+              <tr>
+                <td><strong>Dinner</strong></td>
+                <td>
+                  A universe of possibilities: pre-cooked foods from many
+                  brands, rice, pasta, boiled vegetables, pre-cooked legumes and
+                  cereals.
+                </td>
+              </tr>
+            </table>
+
+            <hr />
+
+            <!-- Safety Tips Section -->
+            <a name="safety"></a>
+            <h2>&#9679; Safety Tips</h2>
+
+            <div class="warning-box">
+              <h3>&#9888; Essential Safety Advice</h3>
+
+              <h4>1. Stay on the Path</h4>
+              <p>
+                Use a reliable GPX track to follow the designated route. If you
+                happen to get lost,
+                <strong
+                  >go back to the last point where you were certain you were on
+                  the track</strong
+                >. Don't invent shortcuts, because you might end up literally in
+                a thorn bush. Don't pay too much attention to cairns (stone
+                stacks) - they are everywhere, even on wrong paths.
+              </p>
+
+              <h4>2. Check the Weather Forecast</h4>
+              <p>
+                The weather can change rapidly; always check the forecast before
+                leaving and while on the route.
+              </p>
+
+              <h4>3. Be Careful with Limestone</h4>
+              <p>
+                When limestone is dry, it has good grip, but
+                <strong>when wet it becomes slippery like a bar of soap</strong
+                >. Avoid letting a layer of mud form under your shoes and don't
+                jump on stones if wet.
+              </p>
+
+              <h4>4. Inform Someone</h4>
+              <p>
+                Let a friend or family member know your planned route and return
+                date.
+              </p>
+
+              <h4>5. Prepare for Emergencies</h4>
+              <p>Bring with you:</p>
+              <ul>
+                <li>A fully charged phone</li>
+                <li>Spare batteries for your headlamp</li>
+                <li>A first aid kit</li>
+              </ul>
+            </div>
+
+            <hr />
+
+            <div class="contact-box">
+              <h4>&#9993; Official Contacts</h4>
+              <p>
+                For questions about booking, permits, or official trail
+                information, contact the Municipality of Baunei's dedicated
+                Selvaggio Blu office:
+              </p>
+              <p style="text-align: center">
+                <strong>Email:</strong>
+                <a href="mailto:selvaggioblu@turismobaunei.eu"
+                  >selvaggioblu@turismobaunei.eu</a
+                ><br />
+                <strong>Phone:</strong> +39 349 546 2583 (Mon-Fri 10:00-13:00
+                &amp; 15:00-16:00)
+              </p>
+            </div>
+
+            <hr />
+
+            <!-- External Resources -->
+            <a name="resources"></a>
+            <h2>&#9679; External Resources</h2>
+
+            <div class="info-box">
+              <h4>&#127760; Useful Links</h4>
+              <ul>
+                <li>
+                  <strong>Weather Forecast:</strong>
+                  <a
+                    href="https://www.meteo.it/previsioni/baunei"
+                    target="_blank"
+                    >Meteo.it - Baunei</a
+                  >
+                </li>
+                <li>
+                  <strong>Official Tourism:</strong>
+                  <a href="https://www.turismobaunei.eu" target="_blank"
+                    >Turismo Baunei</a
+                  >
+                </li>
+                <li>
+                  <strong>Sardinia Maps:</strong>
+                  <a href="https://www.sardegnageoportale.it" target="_blank"
+                    >Sardegna Geoportale</a
+                  >
+                </li>
+                <li>
+                  <strong>Ferry to Sardinia:</strong>
+                  <a href="https://www.directferries.com" target="_blank"
+                    >Direct Ferries</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="warning-box">
+              <h4>&#128680; Emergency Contacts</h4>
+              <ul>
+                <li><strong>European Emergency:</strong> 112</li>
+                <li>
+                  <strong>Mountain Rescue (CNSAS):</strong> 118 or 800-111-118
+                </li>
+                <li><strong>Coast Guard:</strong> 1530</li>
+                <li>
+                  <strong>GPS Coordinates:</strong> Always note your position
+                  when calling for help
+                </li>
+              </ul>
+            </div>
+
+            <div class="back-to-top">
+              <a href="#intro">&#9650; Back to Top</a>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>&#9733; THE WILD BLUE TREK - SELVAGGIO BLU &#9733;</p>
+        <p>Self-Guided Adventure Guide for Sardinia, Italy</p>
+        <p>~ Crafted with care by trekkers, for trekkers ~</p>
+        <hr style="border-color: #666; width: 50%" />
+        <p style="font-size: 10px">
+          This page is best viewed with Netscape Navigator 4.0 or Internet
+          Explorer 5.0
+        </p>
+        <p class="last-updated">Last updated: December 2024</p>
+      </div>
+    </div>
+  </body>
+</html>

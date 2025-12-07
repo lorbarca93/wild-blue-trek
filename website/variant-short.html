@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Version (No Rappelling) - The Wild Blue Trek</title>
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            background-color: #f5f5dc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        /* Outer wrapper */
+        .page-wrapper {
+            width: 100%;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        .header {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 4px solid #001a33;
+        }
+        
+        .header h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-style: italic;
+            color: #ccc;
+        }
+        
+        /* Main layout table */
+        .layout-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            width: 180px;
+            background-color: #e8e8d0;
+            border-right: 3px solid #003366;
+            vertical-align: top;
+            padding: 0;
+        }
+        
+        .sidebar-inner {
+            position: sticky;
+            top: 0;
+            padding: 15px 10px;
+        }
+        
+        .sidebar h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #003366;
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #003366;
+            text-transform: uppercase;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .sidebar li {
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px dotted #999;
+        }
+        
+        .sidebar a {
+            display: block;
+            padding: 8px 5px;
+            color: #003366;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .sidebar a:hover {
+            background-color: #003366;
+            color: #fff;
+        }
+        
+        .sidebar .nav-divider {
+            height: 15px;
+            border-bottom: none;
+        }
+        
+        .sidebar .page-link {
+            background-color: #d0d0c0;
+        }
+        
+        .sidebar .page-link a {
+            color: #660000;
+        }
+        
+        .sidebar .page-link a:hover {
+            background-color: #660000;
+            color: #fff;
+        }
+        
+        .sidebar .current-page {
+            background-color: #003366;
+        }
+        
+        .sidebar .current-page a {
+            color: #fff;
+        }
+        
+        .sidebar .variant-link {
+            background-color: #e0e8d0;
+        }
+        
+        .sidebar .variant-link a {
+            color: #336633;
+        }
+        
+        .sidebar .variant-link a:hover {
+            background-color: #336633;
+            color: #fff;
+        }
+        
+        /* Main content */
+        .main-content {
+            vertical-align: top;
+            padding: 20px 30px;
+            background-color: #fff;
+        }
+        
+        /* Section headers */
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #003366;
+            border-bottom: 3px double #003366;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        h2:first-child {
+            margin-top: 0;
+        }
+        
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #660000;
+            margin-top: 25px;
+        }
+        
+        h4 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #336633;
+        }
+        
+        /* Variant badge */
+        .variant-badge {
+            display: inline-block;
+            background-color: #336633;
+            color: #fff;
+            padding: 5px 15px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        /* Stats box */
+        .stats-box {
+            background-color: #f0f8ff;
+            border: 3px solid #003366;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .stats-box table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .stats-box td {
+            padding: 10px;
+            text-align: center;
+            border-right: 2px solid #003366;
+        }
+        
+        .stats-box td:last-child {
+            border-right: none;
+        }
+        
+        .stats-box .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #003366;
+            font-family: Arial, sans-serif;
+        }
+        
+        .stats-box .stat-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+        }
+        
+        /* Info box */
+        .info-box {
+            background-color: #d4edda;
+            border: 2px solid #336633;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        /* Warning box */
+        .warning-box {
+            background-color: #fff3cd;
+            border: 3px solid #990000;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .warning-box h3 {
+            color: #990000;
+            margin-top: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Tip box */
+        .tip-box {
+            background-color: #e7f3ff;
+            border-left: 5px solid #003366;
+            padding: 10px 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        
+        /* Download box */
+        .download-box {
+            background-color: #336633;
+            color: #fff;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+            border: 3px solid #224422;
+        }
+        
+        .download-box h3 {
+            color: #fff;
+            margin-top: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .download-box a {
+            display: inline-block;
+            background-color: #fff;
+            color: #336633;
+            padding: 10px 25px;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            margin: 5px;
+            border: 2px solid #fff;
+        }
+        
+        .download-box a:hover {
+            background-color: #224422;
+            color: #fff;
+        }
+        
+        /* Data tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: #fff;
+        }
+        
+        .data-table th {
+            background-color: #003366;
+            color: #fff;
+            padding: 10px;
+            border: 1px solid #000;
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+        
+        .data-table td {
+            padding: 10px;
+            border: 1px solid #999;
+            vertical-align: top;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background-color: #f0f0e8;
+        }
+        
+        /* Day box */
+        .day-box {
+            border: 2px solid #336633;
+            margin: 20px 0;
+            background-color: #fafff5;
+        }
+        
+        .day-header {
+            background-color: #336633;
+            color: #fff;
+            padding: 10px 15px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        
+        .day-content {
+            padding: 15px;
+        }
+        
+        .day-stats {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        /* Highlight box */
+        .highlight-box {
+            background-color: #fffacd;
+            border: 2px dashed #996600;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .highlight-box h4 {
+            color: #996600;
+            margin-top: 0;
+        }
+        
+        /* Links */
+        a {
+            color: #003366;
+        }
+        
+        a:visited {
+            color: #660066;
+        }
+        
+        a:hover {
+            color: #990000;
+        }
+        
+        /* Lists */
+        ul {
+            margin: 10px 0;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        /* Horizontal rule */
+        hr {
+            border: none;
+            border-top: 2px solid #003366;
+            margin: 30px 0;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            border-top: 4px solid #001a33;
+        }
+        
+        .footer a {
+            color: #ffcc00;
+        }
+        
+        /* Comparison table */
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .compare-table th {
+            background-color: #003366;
+            color: #fff;
+            padding: 12px;
+            border: 1px solid #000;
+            font-family: Arial, sans-serif;
+        }
+        
+        .compare-table td {
+            padding: 12px;
+            border: 1px solid #999;
+            text-align: center;
+        }
+        
+        .compare-table .feature {
+            text-align: left;
+            font-weight: bold;
+            background-color: #f5f5dc;
+        }
+        
+        .yes {
+            color: #336633;
+            font-weight: bold;
+        }
+        
+        .no {
+            color: #990000;
+            font-weight: bold;
+        }
+
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            .sidebar { display: none; }
+            .main-content { padding: 15px; }
+            .header h1 { font-size: 22px; }
+            .data-table, .compare-table { font-size: 12px; }
+            .data-table th, .data-table td { padding: 6px; }
+            .stats-box .stat-number { font-size: 24px; }
+            .day-box { margin: 10px 0; }
+        }
+
+        /* Print styles */
+        @media print {
+            .sidebar { display: none; }
+            .header { padding: 10px; }
+            .footer { display: none; }
+            body { background-color: #fff; }
+            .main-content { padding: 0; }
+        }
+
+        /* Last updated */
+        .last-updated { font-size: 10px; color: #999; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Header -->
+    <div class="header">
+        <h1>&#9660; THE WILD BLUE TREK &#9660;</h1>
+        <h1>SELVAGGIO BLU</h1>
+        <p>A Complete Self-Guided Adventure Guide for Sardinia's Most Challenging Trek</p>
+    </div>
+    
+    <!-- Main Layout -->
+    <table class="layout-table" cellspacing="0" cellpadding="0">
+        <tr>
+            <!-- Sidebar -->
+            <td class="sidebar">
+                <div class="sidebar-inner">
+                    <h3>&#9776; Pages</h3>
+                    <ul>
+                        <li class="page-link"><a href="index.html">&#9658; Trek Guide</a></li>
+                        <li class="page-link"><a href="about.html">&#9658; About This Project</a></li>
+                    </ul>
+                    
+                    <div class="nav-divider"></div>
+                    
+                    <h3>&#9679; Variants</h3>
+                    <ul>
+                        <li class="variant-link current-page"><a href="variant-short.html">&#9658; Short Version</a></li>
+                        <li class="variant-link"><a href="variant-extended.html">&#9658; Extended Route</a></li>
+                    </ul>
+                    
+                    <div class="nav-divider"></div>
+                    
+                    <h3>&#9679; On This Page</h3>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#comparison">Comparison</a></li>
+                        <li><a href="#stages">Stages</a></li>
+                        <li><a href="#highlights">Highlights</a></li>
+                        <li><a href="#getting-there">Getting There</a></li>
+                        <li><a href="#accommodation">Accommodation</a></li>
+                        <li><a href="#gpx">GPX Download</a></li>
+                    </ul>
+                </div>
+            </td>
+            
+            <!-- Main Content -->
+            <td class="main-content">
+                
+                <a name="overview"></a>
+                <span class="variant-badge">&#9733; Variant Route</span>
+                <h2>&#9679; Short Version (No Rappelling Required)</h2>
+                
+                <p>This fantastic trekking route through the eastern mountains of Sardinia is undoubtedly one of the most beautiful on this wonderful island. It is a <strong>shorter version of the Selvaggio Blu</strong>, free of climbing and <strong>particularly suitable for those who do not want to rappel</strong> during the hike.</p>
+                
+                <div class="stats-box">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="stat-number">~50</div>
+                                <div class="stat-label">Kilometers</div>
+                            </td>
+                            <td>
+                                <div class="stat-number">2000+</div>
+                                <div class="stat-label">Meters Elevation</div>
+                            </td>
+                            <td>
+                                <div class="stat-number">2-3</div>
+                                <div class="stat-label">Days</div>
+                            </td>
+                            <td>
+                                <div class="stat-number">0</div>
+                                <div class="stat-label">Rappels</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <p>The highlights of this Sardinia trek include the suggestive rocky needle <strong>"Pedra Longa"</strong> and the dream beach <strong>"Cala Goloritz&egrave;"</strong>. You will enjoy some of the most impressive views and landscapes of Sardinia, admiring the Ogliastra mountains from every side.</p>
+                
+                <div class="info-box">
+                    <h4>&#9733; Perfect For:</h4>
+                    <ul>
+                        <li>Experienced hikers who want to experience the Selvaggio Blu area <strong>without technical rope skills</strong></li>
+                        <li>Those who want a <strong>shorter, more accessible</strong> version of the classic route</li>
+                        <li>Trekkers looking to combine hiking with <strong>swimming in secluded bays</strong></li>
+                        <li>First-time visitors to the Supramonte who want to test the terrain before attempting the full route</li>
+                    </ul>
+                </div>
+
+                <hr>
+                
+                <a name="comparison"></a>
+                <h2>&#9679; Comparison: Short vs. Classic Route</h2>
+                
+                <table class="compare-table">
+                    <tr>
+                        <th>Feature</th>
+                        <th>Short Version</th>
+                        <th>Classic Selvaggio Blu</th>
+                    </tr>
+                    <tr>
+                        <td class="feature">Distance</td>
+                        <td>~50 km</td>
+                        <td>~43 km</td>
+                    </tr>
+                    <tr>
+                        <td class="feature">Duration</td>
+                        <td>2-3 days</td>
+                        <td>4-5 days</td>
+                    </tr>
+                    <tr>
+                        <td class="feature">Rappelling Required</td>
+                        <td class="no">&#10008; NO</td>
+                        <td class="yes">&#10004; YES (8 descents)</td>
+                    </tr>
+                    <tr>
+                        <td class="feature">Climbing Sections</td>
+                        <td class="no">&#10008; NO</td>
+                        <td class="yes">&#10004; YES</td>
+                    </tr>
+                    <tr>
+                        <td class="feature">Technical Equipment</td>
+                        <td class="no">&#10008; Not needed</td>
+                        <td class="yes">&#10004; Harness, rope, helmet</td>
+                    </tr>
+                    <tr>
+                        <td class="feature">Start Point</td>
+                        <td>Santa Maria Navarrese</td>
+                        <td>Pedra Longa</td>
+                    </tr>
+                    <tr>
+                        <td class="feature">End Point</td>
+                        <td>Santa Maria Navarrese (loop)</td>
+                        <td>Cala Sisine</td>
+                    </tr>
+                    <tr>
+                        <td class="feature">Cala Goloritz&egrave;</td>
+                        <td class="yes">&#10004; Included</td>
+                        <td class="yes">&#10004; Included</td>
+                    </tr>
+                    <tr>
+                        <td class="feature">Pedra Longa</td>
+                        <td class="yes">&#10004; Included</td>
+                        <td class="yes">&#10004; Included</td>
+                    </tr>
+                    <tr>
+                        <td class="feature">Difficulty</td>
+                        <td>Challenging (fitness)</td>
+                        <td>Extreme (fitness + technical)</td>
+                    </tr>
+                </table>
+
+                <hr>
+                
+                <a name="stages"></a>
+                <h2>&#9679; Recommended Stages</h2>
+                
+                <p>While the route can be completed in 2 days by very fit hikers, <strong>we recommend 3 days</strong> to fully enjoy the experience. The Refugio Cooperativa Goloritz&egrave; serves as an excellent midpoint and base for additional day hikes or relaxing beach days.</p>
+                
+                <div class="day-box">
+                    <div class="day-header">DAY 1: Santa Maria Navarrese to Refugio Cooperativa Goloritz&egrave;</div>
+                    <div class="day-content">
+                        <div class="day-stats">
+                            &#128099; ~25 km &nbsp;&nbsp;|&nbsp;&nbsp; Significant elevation gain
+                        </div>
+                        <p>The trek begins at <strong>Santa Maria Navarrese</strong>, a charming fishing village on Sardinia's east coast, right next to the Torre dei Saraceni &mdash; a picturesque sight on the beach.</p>
+                        <p>After a short climb and a fantastic view from a well-positioned panoramic platform, you reach the start of the famous Selvaggio Blu. From here, the trail passes through dense forest to the steep cliffs that characterize the island's coast.</p>
+                        <p><strong>Key stops:</strong></p>
+                        <ul>
+                            <li><strong>Pedra Longa</strong> &mdash; The impressive rocky needle, with a restaurant for a break</li>
+                            <li>Secluded swimming bays with crystal-clear water</li>
+                            <li><strong>Cala Goloritz&egrave;</strong> &mdash; The famous dream beach</li>
+                        </ul>
+                        <p>End the day at the <strong>Refugio Cooperativa Goloritz&egrave;</strong>, where rangers can provide valuable information and advice.</p>
+                    </div>
+                </div>
+                
+                <div class="day-box">
+                    <div class="day-header">DAY 2 (Optional): Rest Day or Day Hikes from Refugio</div>
+                    <div class="day-content">
+                        <p>The Refugio is an excellent base for:</p>
+                        <ul>
+                            <li>Numerous beautiful day hikes in the area</li>
+                            <li>Relaxing beach days in secluded bays</li>
+                            <li>Exploring the surrounding Supramonte terrain</li>
+                            <li>Simply resting and enjoying the wild landscape</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="day-box">
+                    <div class="day-header">DAY 2/3: Refugio Cooperativa Goloritz&egrave; to Santa Maria Navarrese</div>
+                    <div class="day-content">
+                        <div class="day-stats">
+                            &#128099; ~25 km &nbsp;&nbsp;|&nbsp;&nbsp; Return route
+                        </div>
+                        <p>Return via the same route or explore alternative paths back to Santa Maria Navarrese, completing the loop.</p>
+                    </div>
+                </div>
+                
+                <div class="warning-box">
+                    <h3>&#9888; Important Notes</h3>
+                    <ul>
+                        <li>Some trails in this region have sections that are <strong>overgrown or no longer exist</strong>, making it very easy to get lost</li>
+                        <li>These routes are <strong>not suitable for beginners</strong></li>
+                        <li>Rangers at the Refugio can help with information and valuable advice</li>
+                        <li>There is little shade and you are exposed to the elements all day &mdash; bring <strong>sun protection, a hat, and a windbreaker</strong></li>
+                        <li>Carry at least <strong>3 liters of water</strong> per person per day</li>
+                    </ul>
+                </div>
+
+                <hr>
+                
+                <a name="highlights"></a>
+                <h2>&#9679; Route Highlights</h2>
+                
+                <div class="highlight-box">
+                    <h4>&#9733; Pedra Longa</h4>
+                    <p>This impressive rocky needle rises dramatically from the sea. There's a nice restaurant here where you can take a break and refuel. The views from this point are spectacular.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>&#9733; Cala Goloritz&egrave;</h4>
+                    <p>One of the most beautiful beaches in all of Italy, if not Europe. The water is incredibly clear and bright &mdash; perfect for swimming in the secluded bays along the way. The famous limestone arch and crystal-clear waters make this a must-see destination.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>&#9733; Coastal Cliffs</h4>
+                    <p>The view from the high cliffs is breathtaking: you have a wide panorama of the intense blue of the Mediterranean and the picturesque landscape of Sardinia. The rugged cliffs and deep valleys of the Selvaggio Blu area are a true paradise for hikers.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>&#9733; Refugio Cooperativa Goloritz&egrave;</h4>
+                    <p>A perfect midpoint for your trek, staffed by helpful rangers who know the area intimately. An excellent base for extending your stay with day hikes or beach days.</p>
+                </div>
+
+                <hr>
+                
+                <a name="getting-there"></a>
+                <h2>&#9679; Getting There</h2>
+                
+                <h3>By Air</h3>
+                <p>Sardinia has three airports:</p>
+                <ul>
+                    <li><strong>Olbia (OLB)</strong> &mdash; In the north, ~2.5 hours drive to Santa Maria Navarrese</li>
+                    <li><strong>Alghero (AHO)</strong> &mdash; In the northwest</li>
+                    <li><strong>Cagliari (CAG)</strong> &mdash; In the south, near the capital</li>
+                </ul>
+                
+                <h3>By Ferry</h3>
+                <p>Ferries connect mainland Italy to:</p>
+                <ul>
+                    <li><strong>Olbia</strong> (north) &mdash; From Livorno, the ferry takes about 8 hours</li>
+                    <li><strong>Cagliari</strong> (south)</li>
+                </ul>
+                
+                <h3>To Santa Maria Navarrese</h3>
+                <ul>
+                    <li><strong>By bus from Olbia:</strong> ~5 hours</li>
+                    <li><strong>By car from Olbia:</strong> ~2.5 hours</li>
+                </ul>
+                
+                <div class="tip-box">
+                    <strong>Tip:</strong> Use apps like Skyscanner for finding cheap flights and OMIO for booking bus and train tickets within Italy.
+                </div>
+
+                <hr>
+                
+                <a name="accommodation"></a>
+                <h2>&#9679; Accommodation</h2>
+                
+                <h3>Starting Point: Santa Maria Navarrese</h3>
+                <p>This charming fishing village offers various accommodation options:</p>
+                <ul>
+                    <li>Small hotels and B&Bs</li>
+                    <li>Holiday apartments</li>
+                    <li>The village has restaurants and shops for supplies</li>
+                </ul>
+                
+                <h3>On the Trail: Refugio Cooperativa Goloritz&egrave;</h3>
+                <p>The refuge offers:</p>
+                <ul>
+                    <li>Basic accommodation</li>
+                    <li>Camping possibilities</li>
+                    <li>Ranger assistance and local knowledge</li>
+                    <li>A base for exploring the surrounding area</li>
+                </ul>
+                
+                <h3>Alternative: Baunei</h3>
+                <p>The town of Baunei is an excellent base for planning your Selvaggio Blu adventure. From here you can:</p>
+                <ul>
+                    <li>Plan and adapt your itinerary based on your needs and experience level</li>
+                    <li>Find various accommodation options</li>
+                    <li>Purchase supplies before departing</li>
+                    <li>Find experienced local guides if needed</li>
+                </ul>
+
+                <hr>
+                
+                <a name="gpx"></a>
+                <h2>&#9679; GPX Download</h2>
+                
+                <div class="download-box">
+                    <h3>&#128205; Download the GPX Track</h3>
+                    <p>Get the complete route for your GPS device or smartphone:</p>
+                    <br>
+                    <a href="https://out.ac/3vEab4" target="_blank">&#9658; Outdooractive</a>
+                    <a href="https://www.komoot.de/tour/1045777718" target="_blank">&#9658; Komoot</a>
+                    <br><br>
+                    <p style="font-size: 12px; opacity: 0.8;">GPX files can be loaded into most hiking apps including Maps.me, Gaia GPS, AllTrails, and others.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>&#128221; Route Credit</h4>
+                    <p>This variant route information is based on the excellent guide by <strong>Christian Sommer</strong> at <a href="https://www.hikingfex.com/it/post/selvaggio-blu-trekking" target="_blank">HikingFex</a>. Visit his site for additional photos, videos, and detailed gear recommendations.</p>
+                </div>
+
+                <hr>
+                
+                <p style="text-align: center; font-size: 18px;">
+                    <strong>Want the full classic route with all 8 rappels?</strong><br><br>
+                    <a href="index.html" style="background-color: #003366; color: #fff; padding: 10px 20px; text-decoration: none; font-family: Arial, sans-serif;">&#9658; Go to the Classic Trek Guide &#9668;</a>
+                </p>
+
+            </td>
+        </tr>
+    </table>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>&#9733; THE WILD BLUE TREK - SELVAGGIO BLU &#9733;</p>
+        <p>Self-Guided Adventure Guide for Sardinia, Italy</p>
+        <p>~ Crafted with care by trekkers, for trekkers ~</p>
+        <hr style="border-color: #666; width: 50%;">
+        <p style="font-size: 10px;">This page is best viewed with Netscape Navigator 4.0 or Internet Explorer 5.0</p>
+        <p class="last-updated">Last updated: December 2024</p>
+    </div>
+</div>
+
+</body>
+</html>
+

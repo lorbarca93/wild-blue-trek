@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About This Project - The Wild Blue Trek</title>
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            background-color: #f5f5dc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        /* Outer wrapper */
+        .page-wrapper {
+            width: 100%;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        .header {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 4px solid #001a33;
+        }
+        
+        .header h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-style: italic;
+            color: #ccc;
+        }
+        
+        /* Main layout table */
+        .layout-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            width: 180px;
+            background-color: #e8e8d0;
+            border-right: 3px solid #003366;
+            vertical-align: top;
+            padding: 0;
+        }
+        
+        .sidebar-inner {
+            position: sticky;
+            top: 0;
+            padding: 15px 10px;
+        }
+        
+        .sidebar h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #003366;
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #003366;
+            text-transform: uppercase;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .sidebar li {
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px dotted #999;
+        }
+        
+        .sidebar a {
+            display: block;
+            padding: 8px 5px;
+            color: #003366;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .sidebar a:hover {
+            background-color: #003366;
+            color: #fff;
+        }
+        
+        .sidebar .nav-divider {
+            height: 15px;
+            border-bottom: none;
+        }
+        
+        .sidebar .page-link {
+            background-color: #d0d0c0;
+        }
+        
+        .sidebar .page-link a {
+            color: #660000;
+        }
+        
+        .sidebar .page-link a:hover {
+            background-color: #660000;
+            color: #fff;
+        }
+        
+        .sidebar .current-page {
+            background-color: #003366;
+        }
+        
+        .sidebar .current-page a {
+            color: #fff;
+        }
+        
+        /* Main content */
+        .main-content {
+            vertical-align: top;
+            padding: 20px 30px;
+            background-color: #fff;
+        }
+        
+        /* Section headers */
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #003366;
+            border-bottom: 3px double #003366;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        h2:first-child {
+            margin-top: 0;
+        }
+        
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #660000;
+            margin-top: 25px;
+        }
+        
+        h4 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #336633;
+        }
+        
+        /* Quote box */
+        .quote-box {
+            background-color: #f0f8ff;
+            border-left: 5px solid #003366;
+            border-right: 5px solid #003366;
+            padding: 20px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        .quote-box .author {
+            font-size: 14px;
+            font-style: normal;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        /* Philosophy box */
+        .philosophy-box {
+            background-color: #fff8dc;
+            border: 3px solid #996600;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .philosophy-box h3 {
+            color: #996600;
+            margin-top: 0;
+        }
+        
+        /* Info box */
+        .info-box {
+            background-color: #d4edda;
+            border: 2px solid #336633;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        /* Comparison table */
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .compare-table th {
+            background-color: #003366;
+            color: #fff;
+            padding: 15px;
+            border: 1px solid #000;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .compare-table td {
+            padding: 15px;
+            border: 1px solid #999;
+            vertical-align: top;
+            text-align: center;
+        }
+        
+        .compare-table .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #003366;
+        }
+        
+        .compare-table .price-high {
+            color: #990000;
+        }
+        
+        .compare-table .price-low {
+            color: #336633;
+        }
+        
+        /* Links */
+        a {
+            color: #003366;
+        }
+        
+        a:visited {
+            color: #660066;
+        }
+        
+        a:hover {
+            color: #990000;
+        }
+        
+        /* Lists */
+        ul {
+            margin: 10px 0;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        /* Horizontal rule */
+        hr {
+            border: none;
+            border-top: 2px solid #003366;
+            margin: 30px 0;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            border-top: 4px solid #001a33;
+        }
+        
+        .footer a {
+            color: #ffcc00;
+        }
+        
+        /* Highlight text */
+        .highlight {
+            background-color: #ffff99;
+            padding: 2px 5px;
+        }
+        
+        /* Big number */
+        .big-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #003366;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            .sidebar { display: none; }
+            .main-content { padding: 15px; }
+            .header h1 { font-size: 22px; }
+            .compare-table { font-size: 12px; }
+            .compare-table th, .compare-table td { padding: 8px; }
+            .big-number { font-size: 36px; }
+        }
+
+        /* Print styles */
+        @media print {
+            .sidebar { display: none; }
+            .header { padding: 10px; }
+            .footer { display: none; }
+            body { background-color: #fff; }
+            .main-content { padding: 0; }
+        }
+
+        /* Last updated */
+        .last-updated { font-size: 10px; color: #999; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Header -->
+    <div class="header">
+        <h1>&#9660; THE WILD BLUE TREK &#9660;</h1>
+        <h1>SELVAGGIO BLU</h1>
+        <p>A Complete Self-Guided Adventure Guide for Sardinia's Most Challenging Trek</p>
+    </div>
+    
+    <!-- Main Layout -->
+    <table class="layout-table" cellspacing="0" cellpadding="0">
+        <tr>
+            <!-- Sidebar -->
+            <td class="sidebar">
+                <div class="sidebar-inner">
+                    <h3>&#9776; Pages</h3>
+                    <ul>
+                        <li class="page-link"><a href="index.html">&#9658; Trek Guide</a></li>
+                        <li class="page-link current-page"><a href="about.html">&#9658; About This Project</a></li>
+                    </ul>
+                    
+                    <div class="nav-divider"></div>
+                    
+                    <h3>&#9679; Variants</h3>
+                    <ul>
+                        <li style="background-color: #e0e8d0; border-bottom: 1px dotted #999;">
+                            <a href="variant-short.html" style="color: #336633;">&#9658; Short Version</a>
+                        </li>
+                        <li style="background-color: #e0e8d0; border-bottom: 1px dotted #999;">
+                            <a href="variant-extended.html" style="color: #336633;">&#9658; Extended Route</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="nav-divider"></div>
+                    
+                    <h3>&#9679; On This Page</h3>
+                    <ul>
+                        <li><a href="#philosophy">Our Philosophy</a></li>
+                        <li><a href="#why">Why Self-Organize?</a></li>
+                        <li><a href="#costs">Cost Comparison</a></li>
+                        <li><a href="#skills">Required Skills</a></li>
+                        <li><a href="#who">Who Is This For?</a></li>
+                    </ul>
+                </div>
+            </td>
+            
+            <!-- Main Content -->
+            <td class="main-content">
+                
+                <a name="philosophy"></a>
+                <h2>&#9679; About This Project</h2>
+                
+                <div class="quote-box">
+                    "The journey of a thousand miles begins with a single step... and sometimes, that step is deciding to do it yourself."
+                    <div class="author">&mdash; Ancient Wisdom, Modern Application</div>
+                </div>
+                
+                <p>This website was created with a simple but powerful belief: <strong>adventure should be accessible to everyone</strong>, not just those who can afford expensive guided tours.</p>
+                
+                <p>The Selvaggio Blu is often called Italy's most beautiful and challenging coastal trek. It winds through the dramatic limestone cliffs and hidden coves of Sardinia's Gulf of Orosei, offering views and experiences that are truly unforgettable. But for too long, this incredible adventure has been gatekept behind high prices and the assumption that you <em>must</em> hire a local agency.</p>
+                
+                <p><strong>We're here to change that.</strong></p>
+
+                <hr>
+                
+                <a name="why"></a>
+                <h2>&#9679; Why Self-Organize?</h2>
+                
+                <div class="philosophy-box">
+                    <h3>&#9733; Our Core Belief</h3>
+                    <p>If you have the skills, the preparation, and the determination, you should be able to experience the Selvaggio Blu on your own terms &mdash; without paying thousands of euros for a guided tour.</p>
+                    <p>This doesn't mean going in unprepared. It means <strong>empowering yourself</strong> with the knowledge that guides have, so you can make informed decisions about your own adventure.</p>
+                </div>
+                
+                <h3>The Freedom of Independence</h3>
+                
+                <p>When you self-organize the Selvaggio Blu, you gain:</p>
+                
+                <ul>
+                    <li><strong>Your Own Pace:</strong> No rushing to keep up with a group, no waiting for slower members. You move at the rhythm that feels right for you.</li>
+                    <li><strong>Flexible Schedule:</strong> Want to spend an extra hour at that breathtaking viewpoint? Go ahead. Your schedule, your rules.</li>
+                    <li><strong>True Adventure:</strong> There's something deeply satisfying about navigating challenges yourself, problem-solving in real-time, and earning every step of your journey.</li>
+                    <li><strong>Personal Growth:</strong> Self-reliance in the wilderness builds confidence that extends far beyond the trail.</li>
+                    <li><strong>Significant Savings:</strong> Keep your hard-earned money for more adventures, better gear, or that celebratory dinner at the end.</li>
+                </ul>
+                
+                <h3>The Spirit of Adventure</h3>
+                
+                <p>Somewhere along the way, we've been taught that challenging outdoor experiences require professional guides. While guides provide tremendous value for those who need them, this mindset has also created a culture of dependency.</p>
+                
+                <p>Our ancestors explored unmapped territories with nothing but their wits and determination. Today, with GPS technology, detailed route descriptions, and weather forecasts at our fingertips, <span class="highlight">we have more resources than ever to safely undertake adventures independently</span>.</p>
+                
+                <p>This website exists to give you those resources for the Selvaggio Blu.</p>
+
+                <hr>
+                
+                <a name="costs"></a>
+                <h2>&#9679; Cost Comparison</h2>
+                
+                <p>Let's talk numbers. Here's what you can expect to pay:</p>
+                
+                <table class="compare-table">
+                    <tr>
+                        <th width="50%">&#128176; Guided Tour</th>
+                        <th width="50%">&#127968; Self-Organized</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="price price-high">&euro;1,500 - &euro;2,000</div>
+                            <p>per person for 5-6 days</p>
+                        </td>
+                        <td>
+                            <div class="price price-low">&euro;300 - &euro;500</div>
+                            <p>per person for 5-6 days</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Includes:</strong>
+                            <ul style="text-align: left;">
+                                <li>Professional guide</li>
+                                <li>Logistics &amp; food delivery</li>
+                                <li>Route planning</li>
+                                <li>Equipment (sometimes)</li>
+                                <li>Municipality fees</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <strong>You Pay For:</strong>
+                            <ul style="text-align: left;">
+                                <li>Logistics service only (~&euro;150-250)</li>
+                                <li>Food &amp; supplies (~&euro;80-150)</li>
+                                <li>Municipality fee (&euro;30)</li>
+                                <li>Your own equipment</li>
+                                <li>Transportation</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: #f0f8ff;">
+                            <strong>Potential Savings:</strong> <span class="big-number">&euro;1,000+</span> per person
+                        </td>
+                    </tr>
+                </table>
+                
+                <div class="info-box">
+                    <h4>&#128161; Think About It</h4>
+                    <p>For a group of 4 friends, self-organizing can save you <strong>&euro;4,000 or more</strong> collectively. That's enough for another entire trip, quality outdoor gear that will last years, or simply money back in your pocket.</p>
+                </div>
+
+                <hr>
+                
+                <a name="skills"></a>
+                <h2>&#9679; Required Skills</h2>
+                
+                <p>Self-organizing the Selvaggio Blu is <strong>not for everyone</strong>. We want to be completely honest about what's required:</p>
+                
+                <h3>Essential Skills You MUST Have:</h3>
+                
+                <ul>
+                    <li><strong>Rappelling (Abseiling):</strong> You must be comfortable and competent with rope descents. The route includes 8 rappels, some up to 45 meters. This is non-negotiable.</li>
+                    <li><strong>Navigation:</strong> Ability to use GPS devices and read terrain. The path is often unmarked and easy to lose.</li>
+                    <li><strong>Multi-Day Trekking Experience:</strong> This should NOT be your first serious trek. You need to know how your body responds to consecutive days of challenging hiking.</li>
+                    <li><strong>Problem-Solving:</strong> Things will go differently than planned. You need to stay calm and adapt.</li>
+                    <li><strong>Basic First Aid:</strong> Know how to handle common trail injuries and emergencies.</li>
+                </ul>
+                
+                <h3>Physical Requirements:</h3>
+                
+                <ul>
+                    <li>Excellent cardiovascular fitness</li>
+                    <li>Strong legs and ankles (the terrain is brutal)</li>
+                    <li>Good balance and comfort on exposed terrain</li>
+                    <li>Ability to carry a daypack for 6-8 hours on rough ground</li>
+                </ul>
+                
+                <h3>If You're Missing Any of These...</h3>
+                
+                <p>Please consider either:</p>
+                <ol>
+                    <li>Taking courses to develop these skills first (especially rappelling)</li>
+                    <li>Joining a guided tour for your first time, then returning independently later</li>
+                    <li>Going with experienced friends who can support you</li>
+                </ol>
+                
+                <p>There is <strong>no shame</strong> in choosing a guided tour. The shame would be in overestimating your abilities and putting yourself or rescue teams at risk.</p>
+
+                <hr>
+                
+                <a name="who"></a>
+                <h2>&#9679; Who Is This Guide For?</h2>
+                
+                <p>This guide is specifically created for:</p>
+                
+                <ul>
+                    <li><strong>Experienced Trekkers:</strong> Who have completed challenging multi-day hikes elsewhere</li>
+                    <li><strong>Climbers &amp; Mountaineers:</strong> Who are comfortable with technical terrain and rope work</li>
+                    <li><strong>Adventure Travelers:</strong> Who prefer independence over organized tours</li>
+                    <li><strong>Budget-Conscious Adventurers:</strong> Who want to experience world-class trekking without world-class prices</li>
+                    <li><strong>International Visitors:</strong> Who may not have access to Italian-language resources</li>
+                </ul>
+                
+                <div class="philosophy-box">
+                    <h3>&#9733; Our Promise</h3>
+                    <p>We provide all the information you need &mdash; honestly and completely. We don't hide difficulties to make self-organizing seem easier than it is, and we don't exaggerate challenges to push you toward paid services.</p>
+                    <p>You deserve accurate information to make your own decisions.</p>
+                </div>
+                
+                <h3>A Note on Local Guides</h3>
+                
+                <p>We have immense respect for the local guides of the Selvaggio Blu. They possess knowledge accumulated over decades and provide an invaluable service for those who need or want it. This guide doesn't exist to take business away from them &mdash; it exists to serve a different audience.</p>
+                
+                <p>If you read our <a href="index.html">Trek Guide</a> and realize you're not ready for independent travel, <strong>please hire a guide</strong>. They will show you an incredible experience, and you'll return home safely with memories to last a lifetime.</p>
+                
+                <p>But if you have the skills, the experience, and the drive &mdash; welcome to the adventure of a lifetime.</p>
+                
+                <hr>
+                
+                <p style="text-align: center; font-size: 18px;">
+                    <strong>Ready to start planning?</strong><br><br>
+                    <a href="index.html" style="background-color: #003366; color: #fff; padding: 10px 20px; text-decoration: none; font-family: Arial, sans-serif;">&#9658; Go to the Trek Guide &#9668;</a>
+                </p>
+
+            </td>
+        </tr>
+    </table>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>&#9733; THE WILD BLUE TREK - SELVAGGIO BLU &#9733;</p>
+        <p>Self-Guided Adventure Guide for Sardinia, Italy</p>
+        <p>~ Crafted with care by trekkers, for trekkers ~</p>
+        <hr style="border-color: #666; width: 50%;">
+        <p style="font-size: 10px;">This page is best viewed with Netscape Navigator 4.0 or Internet Explorer 5.0</p>
+        <p class="last-updated">Last updated: December 2024</p>
+    </div>
+</div>
+
+</body>
+</html>
+

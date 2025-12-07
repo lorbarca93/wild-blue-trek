@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Route to Cala Gonone - The Wild Blue Trek</title>
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            background-color: #f5f5dc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .page-wrapper { width: 100%; min-height: 100vh; }
+        
+        .header {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 4px solid #001a33;
+        }
+        
+        .header h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+        
+        .header p { margin: 10px 0 0 0; font-style: italic; color: #ccc; }
+        
+        .layout-table { width: 100%; border-collapse: collapse; }
+        
+        .sidebar {
+            width: 180px;
+            background-color: #e8e8d0;
+            border-right: 3px solid #003366;
+            vertical-align: top;
+            padding: 0;
+        }
+        
+        .sidebar-inner { position: sticky; top: 0; padding: 15px 10px; }
+        
+        .sidebar h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #003366;
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #003366;
+            text-transform: uppercase;
+        }
+        
+        .sidebar ul { list-style: none; margin: 0; padding: 0; }
+        .sidebar li { margin: 0; padding: 0; border-bottom: 1px dotted #999; }
+        
+        .sidebar a {
+            display: block;
+            padding: 8px 5px;
+            color: #003366;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .sidebar a:hover { background-color: #003366; color: #fff; }
+        .sidebar .nav-divider { height: 15px; border-bottom: none; }
+        .sidebar .page-link { background-color: #d0d0c0; }
+        .sidebar .page-link a { color: #660000; }
+        .sidebar .page-link a:hover { background-color: #660000; color: #fff; }
+        .sidebar .current-page { background-color: #003366; }
+        .sidebar .current-page a { color: #fff; }
+        .sidebar .variant-link { background-color: #e0e8d0; }
+        .sidebar .variant-link a { color: #336633; }
+        .sidebar .variant-link a:hover { background-color: #336633; color: #fff; }
+        
+        .main-content { vertical-align: top; padding: 20px 30px; background-color: #fff; }
+        
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #003366;
+            border-bottom: 3px double #003366;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h2:first-child { margin-top: 0; }
+        h3 { font-family: Arial, Helvetica, sans-serif; color: #660000; margin-top: 25px; }
+        h4 { font-family: Arial, Helvetica, sans-serif; color: #336633; }
+        
+        .variant-badge {
+            display: inline-block;
+            background-color: #660000;
+            color: #fff;
+            padding: 5px 15px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .stats-box {
+            background-color: #f0f8ff;
+            border: 3px solid #003366;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .stats-box table { width: 100%; border-collapse: collapse; }
+        .stats-box td { padding: 10px; text-align: center; border-right: 2px solid #003366; }
+        .stats-box td:last-child { border-right: none; }
+        .stats-box .stat-number { font-size: 32px; font-weight: bold; color: #003366; font-family: Arial, sans-serif; }
+        .stats-box .stat-label { font-size: 12px; color: #666; text-transform: uppercase; }
+        
+        .info-box { background-color: #d4edda; border: 2px solid #336633; padding: 15px; margin: 20px 0; }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border: 3px solid #990000;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning-box h3 { color: #990000; margin-top: 0; font-family: Arial, sans-serif; }
+        
+        .tip-box {
+            background-color: #e7f3ff;
+            border-left: 5px solid #003366;
+            padding: 10px 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        
+        .day-box { border: 2px solid #660000; margin: 20px 0; background-color: #fff5f5; }
+        .day-header {
+            background-color: #660000;
+            color: #fff;
+            padding: 10px 15px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        .day-content { padding: 15px; }
+        .day-stats { font-family: Arial, sans-serif; font-size: 14px; color: #666; margin-bottom: 10px; }
+        
+        .waypoint-list { background-color: #f5f5dc; border: 2px solid #996600; padding: 15px; margin: 20px 0; }
+        .waypoint-list h4 { color: #996600; margin-top: 0; }
+        .waypoint-list ol { margin: 10px 0; padding-left: 25px; }
+        .waypoint-list li { margin: 8px 0; }
+        
+        .equipment-box { background-color: #ffe6e6; border: 2px solid #990000; padding: 15px; margin: 20px 0; }
+        .equipment-box h4 { color: #990000; margin-top: 0; }
+        
+        .data-table { width: 100%; border-collapse: collapse; margin: 15px 0; background-color: #fff; }
+        .data-table th { background-color: #003366; color: #fff; padding: 10px; border: 1px solid #000; font-family: Arial, sans-serif; text-align: left; }
+        .data-table td { padding: 10px; border: 1px solid #999; vertical-align: top; }
+        .data-table tr:nth-child(even) { background-color: #f0f0e8; }
+        
+        a { color: #003366; }
+        a:visited { color: #660066; }
+        a:hover { color: #990000; }
+        
+        ul { margin: 10px 0; }
+        li { margin: 5px 0; }
+        hr { border: none; border-top: 2px solid #003366; margin: 30px 0; }
+        
+        .footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            border-top: 4px solid #001a33;
+        }
+        .footer a { color: #ffcc00; }
+        
+        .difficulty-badge {
+            display: inline-block;
+            background-color: #990000;
+            color: #fff;
+            padding: 3px 8px;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            .sidebar { display: none; }
+            .main-content { padding: 15px; }
+            .header h1 { font-size: 22px; }
+            .data-table { font-size: 12px; }
+            .data-table th, .data-table td { padding: 6px; }
+            .stats-box .stat-number { font-size: 24px; }
+            .stats-box td { padding: 5px; border-right: 1px solid #003366; }
+            .day-box { margin: 10px 0; }
+        }
+
+        /* Print styles */
+        @media print {
+            .sidebar { display: none; }
+            .header { padding: 10px; }
+            .footer { display: none; }
+            body { background-color: #fff; }
+            .main-content { padding: 0; }
+        }
+
+        /* Last updated */
+        .last-updated { font-size: 10px; color: #999; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <div class="header">
+        <h1>&#9660; THE WILD BLUE TREK &#9660;</h1>
+        <h1>SELVAGGIO BLU</h1>
+        <p>A Complete Self-Guided Adventure Guide for Sardinia's Most Challenging Trek</p>
+    </div>
+    
+    <table class="layout-table" cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="sidebar">
+                <div class="sidebar-inner">
+                    <h3>&#9776; Pages</h3>
+                    <ul>
+                        <li class="page-link"><a href="index.html">&#9658; Trek Guide</a></li>
+                        <li class="page-link"><a href="about.html">&#9658; About This Project</a></li>
+                    </ul>
+                    
+                    <div class="nav-divider"></div>
+                    
+                    <h3>&#9679; Variants</h3>
+                    <ul>
+                        <li class="variant-link"><a href="variant-short.html">&#9658; Short Version</a></li>
+                        <li class="variant-link current-page"><a href="variant-extended.html">&#9658; Extended Route</a></li>
+                    </ul>
+                    
+                    <div class="nav-divider"></div>
+                    
+                    <h3>&#9679; On This Page</h3>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#difficulty">Difficulty</a></li>
+                        <li><a href="#waypoints">Waypoints</a></li>
+                        <li><a href="#stages">5-Day Stages</a></li>
+                        <li><a href="#equipment">Equipment</a></li>
+                        <li><a href="#beaches">Famous Beaches</a></li>
+                        <li><a href="#logistics">Logistics</a></li>
+                    </ul>
+                </div>
+            </td>
+            
+            <td class="main-content">
+                
+                <a name="overview"></a>
+                <span class="variant-badge">&#9733; Advanced Variant</span>
+                <h2>&#9679; Extended Route to Cala Gonone</h2>
+                
+                <p>This extended variant continues <strong>beyond the classic Selvaggio Blu endpoint</strong> at Cala Sisine, traversing northward along the dramatic coastline to reach <strong>Cala Gonone</strong>. The route passes through some of Sardinia's most famous beaches, including the legendary <strong>Cala Luna</strong>.</p>
+                
+                <div class="stats-box">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="stat-number">5</div>
+                                <div class="stat-label">Days</div>
+                            </td>
+                            <td>
+                                <div class="stat-number">T6+</div>
+                                <div class="stat-label">Hiking Grade</div>
+                            </td>
+                            <td>
+                                <div class="stat-number">IV</div>
+                                <div class="stat-label">UIAA Climbing</div>
+                            </td>
+                            <td>
+                                <div class="stat-number">8+</div>
+                                <div class="stat-label">Rappels</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="warning-box">
+                    <h3>&#9888; EXTREME DIFFICULTY</h3>
+                    <p>This variant is rated <span class="difficulty-badge">T6+</span> (difficult high-level alpine hiking) with climbing sections up to <span class="difficulty-badge">IV UIAA</span>. It requires:</p>
+                    <ul>
+                        <li>Advanced rope work and rappelling skills</li>
+                        <li>Multi-day wilderness experience</li>
+                        <li>Excellent physical conditioning</li>
+                        <li>Navigation skills in unmarked terrain</li>
+                        <li>Complete self-sufficiency (bivouac camping)</li>
+                    </ul>
+                    <p><strong>This is NOT for beginners.</strong> Attempt only with proper experience and preparation.</p>
+                </div>
+
+                <hr>
+                
+                <a name="difficulty"></a>
+                <h2>&#9679; Difficulty Rating</h2>
+                
+                <table class="data-table">
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Rating</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Hiking</strong></td>
+                        <td><span class="difficulty-badge">T6+</span></td>
+                        <td>Difficult high-level alpine hiking. Exposed terrain, unmarked paths, requires route-finding skills.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Climbing</strong></td>
+                        <td><span class="difficulty-badge">IV UIAA</span></td>
+                        <td>Technical climbing sections requiring rope work. Not just scrambling.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rappelling</strong></td>
+                        <td><strong>8+ descents</strong></td>
+                        <td>Multiple rope descents, some up to 45+ meters. Double rope technique required.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Navigation</strong></td>
+                        <td><strong>Expert</strong></td>
+                        <td>No marked trails. GPS essential. Many groups get lost even with tracks.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Accommodation</strong></td>
+                        <td><strong>Bivouac</strong></td>
+                        <td>"Into the wild" - sleeping under the stars or in caves. No refuges on extended section.</td>
+                    </tr>
+                </table>
+
+                <hr>
+                
+                <a name="waypoints"></a>
+                <h2>&#9679; Route Waypoints</h2>
+                
+                <p>The extended route follows these key waypoints from south to north:</p>
+                
+                <div class="waypoint-list">
+                    <h4>&#128205; Complete Waypoint Sequence</h4>
+                    <ol>
+                        <li><strong>Santa Maria Navarrese</strong> (10 m) &mdash; Start point, coastal village</li>
+                        <li><strong>Pedra Longa</strong> (128 m) &mdash; Iconic rock spire, restaurant available</li>
+                        <li><strong>Punta Giradili</strong> &mdash; Trail start for the classic route</li>
+                        <li><strong>Punta Salinas</strong> (466 m) &mdash; High point with panoramic views</li>
+                        <li><strong>Cala Goloritz&egrave;</strong> &mdash; Famous beach with limestone arch</li>
+                        <li><strong>Cala Sisine</strong> &mdash; Classic route endpoint / Extended route midpoint</li>
+                        <li><strong>Cala Luna</strong> &mdash; Legendary crescent beach with caves</li>
+                        <li><strong>Cala Fuili</strong> &mdash; Small beach near Cala Gonone</li>
+                        <li><strong>Cala Gonone</strong> &mdash; Extended route endpoint, town with services</li>
+                    </ol>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>Key Difference:</strong> The classic Selvaggio Blu ends at Cala Sisine. This extended variant adds approximately 2 more days of coastal trekking to reach Cala Gonone, passing through Cala Luna &mdash; one of the Mediterranean's most beautiful beaches.
+                </div>
+
+                <hr>
+                
+                <a name="stages"></a>
+                <h2>&#9679; Recommended 5-Day Stages</h2>
+                
+                <div class="day-box">
+                    <div class="day-header">DAY 1: Santa Maria Navarrese to Portu Pedrosu area</div>
+                    <div class="day-content">
+                        <p>Begin at <strong>Santa Maria Navarrese</strong>, passing the iconic <strong>Pedra Longa</strong> rock spire. Ascend via the Giradili ledge (sun-exposed, carry extra water). Camp in the Portu Pedrosu area.</p>
+                        <p><strong>Highlights:</strong> Pedra Longa views, coastal panoramas</p>
+                    </div>
+                </div>
+                
+                <div class="day-box">
+                    <div class="day-header">DAY 2: Portu Pedrosu to S'Arcu 'e Su Tasaru</div>
+                    <div class="day-content">
+                        <p>Long day through technical terrain. Navigate through Bacu Tenadili canyon or take the Masadorgittala variant. Reach the high plateau at S'Arcu 'e Su Tasaru.</p>
+                        <p><strong>Challenges:</strong> Canyon navigation, route-finding, elevation gain</p>
+                    </div>
+                </div>
+                
+                <div class="day-box">
+                    <div class="day-header">DAY 3: S'Arcu 'e Su Tasaru to Cala Sisine area</div>
+                    <div class="day-content">
+                        <p>Multiple rappels begin. Descend through Bacu Padente with 4 rope descents. Pass the stunning <strong>Cala Goloritz&egrave;</strong> beach. Continue to Cala Sisine area.</p>
+                        <p><strong>Technical:</strong> 4 rappels, exposed traverses, difficult navigation</p>
+                    </div>
+                </div>
+                
+                <div class="day-box">
+                    <div class="day-header">DAY 4: Cala Sisine to Cala Luna</div>
+                    <div class="day-content">
+                        <p>Continue the final 4 rappels including the 45m descent (longest on the route). Navigate the Plumare Via Ferrata. Reach the legendary <strong>Cala Luna</strong> beach.</p>
+                        <p><strong>Technical:</strong> 4 rappels (up to 45m), via ferrata section</p>
+                        <p><strong>Reward:</strong> Camping at one of the Mediterranean's most beautiful beaches</p>
+                    </div>
+                </div>
+                
+                <div class="day-box">
+                    <div class="day-header">DAY 5: Cala Luna to Cala Gonone</div>
+                    <div class="day-content">
+                        <p>Final stretch along the coast. Pass through <strong>Cala Fuili</strong> beach before arriving at <strong>Cala Gonone</strong>, a proper town with restaurants, hotels, and transport connections.</p>
+                        <p><strong>Character:</strong> Less technical than previous days, coastal walking with beach access</p>
+                        <p><strong>Finish:</strong> Civilization! Hot showers, restaurants, ferry/bus connections</p>
+                    </div>
+                </div>
+
+                <hr>
+                
+                <a name="equipment"></a>
+                <h2>&#9679; Essential Equipment</h2>
+                
+                <div class="equipment-box">
+                    <h4>&#9888; MANDATORY Rope Gear</h4>
+                    <p>The following equipment is <strong>absolutely required</strong> for the extended route:</p>
+                    <ul>
+                        <li><strong>2 x Half Ropes (40m minimum each)</strong> &mdash; Essential for the 45m rappel</li>
+                        <li><strong>Climbing Harness</strong> &mdash; Must be comfortable for all-day wear</li>
+                        <li><strong>Carabiners</strong> &mdash; Multiple locking and non-locking</li>
+                        <li><strong>Slings/Webbing</strong> &mdash; For anchors and extensions</li>
+                        <li><strong>Kevlar Cord</strong> &mdash; For retrievable anchors</li>
+                        <li><strong>Belay/Rappel Device</strong> &mdash; Figure-8 or tube-style</li>
+                        <li><strong>Helmet</strong> &mdash; Mandatory for all technical sections</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <h4>&#9978; Bivouac Gear</h4>
+                    <p>Since the extended section has no refuges, full bivouac equipment is required:</p>
+                    <ul>
+                        <li><strong>Sleeping Pad</strong> &mdash; Inflatable or foam</li>
+                        <li><strong>Sleeping Bag</strong> &mdash; 3-season minimum</li>
+                        <li><strong>Waterproof Tarp/Bivvy</strong> &mdash; Weather protection essential</li>
+                        <li><strong>Headlamp</strong> &mdash; With spare batteries</li>
+                    </ul>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>Weight Consideration:</strong> With all rope gear, bivouac equipment, food, and water (3+ liters/day), packs can exceed 20kg. Consider using logistics support for the classic section and carrying only essentials for the extended portion.
+                </div>
+
+                <hr>
+                
+                <a name="beaches"></a>
+                <h2>&#9679; Famous Beaches on the Extended Route</h2>
+                
+                <h3>Cala Goloritz&egrave;</h3>
+                <p>Often ranked among <strong>Italy's most beautiful beaches</strong>. Features crystal-clear turquoise water and a distinctive limestone arch. The iconic "Aguglia" (needle) rock formation towers 143 meters above the sea. UNESCO World Heritage monument.</p>
+                
+                <h3>Cala Sisine</h3>
+                <p>A dramatic fjord-like inlet surrounded by limestone cliffs. White pebble beach with a seasonal bar/restaurant. This is where the <strong>classic Selvaggio Blu ends</strong> &mdash; and where the extended variant continues.</p>
+                
+                <h3>Cala Luna</h3>
+                <p>The <strong>crown jewel</strong> of the extended route. A crescent-shaped beach backed by dramatic caves and oleander groves. Featured in numerous films. One of the most famous beaches in the entire Mediterranean. Accessible only by boat or on foot.</p>
+                
+                <h3>Cala Fuili</h3>
+                <p>A smaller, quieter beach just south of Cala Gonone. Easier access marks the transition back to civilization. Good swimming spot to wash off days of trail dust before reaching town.</p>
+
+                <hr>
+                
+                <a name="logistics"></a>
+                <h2>&#9679; Logistics Considerations</h2>
+                
+                <h3>Start Point: Santa Maria Navarrese</h3>
+                <ul>
+                    <li>Small coastal village with hotels, B&Bs, restaurants</li>
+                    <li>Accessible by bus from Olbia (~5 hours) or car (~2.5 hours)</li>
+                    <li>Last chance for supplies before the trek</li>
+                </ul>
+                
+                <h3>End Point: Cala Gonone</h3>
+                <ul>
+                    <li>Proper tourist town with full services</li>
+                    <li>Hotels, restaurants, shops, ATMs</li>
+                    <li>Ferry connections to beaches and other coastal towns</li>
+                    <li>Bus connections to Nuoro and beyond</li>
+                </ul>
+                
+                <h3>One-Way Transport</h3>
+                <p>Since this is a <strong>point-to-point route</strong> (not a loop), transport planning is essential:</p>
+                <ul>
+                    <li>Leave a car at Cala Gonone and take a taxi/bus to Santa Maria Navarrese</li>
+                    <li>Arrange pickup at Cala Gonone</li>
+                    <li>Use public transport (more complex but possible)</li>
+                </ul>
+                
+                <h3>Logistics Support</h3>
+                <p>Standard logistics services cover the <strong>classic route to Cala Sisine</strong>. For the extended section (Sisine to Gonone), logistical support is limited. Some options:</p>
+                <ul>
+                    <li>Carry all supplies for the final 2 days</li>
+                    <li>Arrange boat delivery to Cala Luna</li>
+                    <li>Time your arrival at Cala Luna when the seasonal bar is operating</li>
+                </ul>
+                
+                <div class="info-box">
+                    <h4>&#128221; Route Credit</h4>
+                    <p>Extended route information compiled from trip reports on <a href="https://www.hikr.org/tour/post142943.html" target="_blank">hikr.org</a> and other experienced trekkers who have completed the full Santa Maria Navarrese to Cala Gonone traverse.</p>
+                </div>
+
+                <hr>
+                
+                <p style="text-align: center; font-size: 18px;">
+                    <strong>Looking for other options?</strong><br><br>
+                    <a href="index.html" style="background-color: #003366; color: #fff; padding: 10px 20px; text-decoration: none; font-family: Arial, sans-serif; margin: 5px;">Classic Route Guide</a>
+                    <a href="variant-short.html" style="background-color: #336633; color: #fff; padding: 10px 20px; text-decoration: none; font-family: Arial, sans-serif; margin: 5px;">Short Version (No Ropes)</a>
+                </p>
+
+            </td>
+        </tr>
+    </table>
+    
+    <div class="footer">
+        <p>&#9733; THE WILD BLUE TREK - SELVAGGIO BLU &#9733;</p>
+        <p>Self-Guided Adventure Guide for Sardinia, Italy</p>
+        <p>~ Crafted with care by trekkers, for trekkers ~</p>
+        <hr style="border-color: #666; width: 50%;">
+        <p style="font-size: 10px;">This page is best viewed with Netscape Navigator 4.0 or Internet Explorer 5.0</p>
+        <p class="last-updated">Last updated: December 2024</p>
+    </div>
+</div>
+
+</body>
+</html>
+
