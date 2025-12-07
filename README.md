@@ -14,15 +14,15 @@ A retro-styled, static HTML website providing comprehensive information for hike
 
 ## 📸 Preview
 
-| Desktop View | Mobile View |
-|--------------|-------------|
+| Desktop View                                                         | Mobile View                                                        |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | ![Desktop](https://via.placeholder.com/400x300?text=Desktop+Preview) | ![Mobile](https://via.placeholder.com/200x400?text=Mobile+Preview) |
 
 ---
 
 ## 🎯 Purpose
 
-This website helps international trekkers (primarily English-speaking foreigners) organize and complete the Selvaggio Blu trek on their own. 
+This website helps international trekkers (primarily English-speaking foreigners) organize and complete the Selvaggio Blu trek on their own.
 
 **Philosophy:** Adventure should be accessible to everyone - not just those who can afford expensive guided tours (typically €1,500-2,000 per person).
 
@@ -32,11 +32,11 @@ With proper preparation, skills, and a logistics service for food/water delivery
 
 ## 🗺️ Route Variants
 
-| Route | Duration | Difficulty | Rappelling |
-|-------|----------|------------|------------|
-| **[Classic Route](index.html)** | 4-5 days | 🔴 Extreme | 8 rappels (up to 50m) |
-| **[Short Version](variant-short.html)** | 2-3 days | 🟢 Moderate | None required |
-| **[Extended Route](variant-extended.html)** | 5 days | 🔴 Extreme+ | 8+ rappels (up to 45m) |
+| Route                                       | Duration | Difficulty  | Rappelling             |
+| ------------------------------------------- | -------- | ----------- | ---------------------- |
+| **[Classic Route](index.html)**             | 4-5 days | 🔴 Extreme  | 8 rappels (up to 50m)  |
+| **[Short Version](variant-short.html)**     | 2-3 days | 🟢 Moderate | None required          |
+| **[Extended Route](variant-extended.html)** | 5 days   | 🔴 Extreme+ | 8+ rappels (up to 45m) |
 
 ---
 
@@ -81,6 +81,7 @@ This site is deployed on Cloudflare Pages:
 ### Alternative Hosting
 
 These are static HTML files - deploy anywhere:
+
 - [GitHub Pages](https://pages.github.com) - Free GitHub hosting
 - [Netlify](https://netlify.com) - Drag & drop deployment
 - [Vercel](https://vercel.com) - Git integration
@@ -122,26 +123,26 @@ npx serve
 
 ## 🎨 Color Palette
 
-| Element | Color | Hex |
-|---------|-------|-----|
-| Primary (headers) | Navy Blue | `#003366` |
-| Background | Cream | `#f5f5dc` |
-| Content | White | `#fff` |
-| Sidebar | Light Tan | `#e8e8d0` |
-| Warning | Dark Red | `#990000` |
-| Success | Forest Green | `#336633` |
+| Element           | Color        | Hex       |
+| ----------------- | ------------ | --------- |
+| Primary (headers) | Navy Blue    | `#003366` |
+| Background        | Cream        | `#f5f5dc` |
+| Content           | White        | `#fff`    |
+| Sidebar           | Light Tan    | `#e8e8d0` |
+| Warning           | Dark Red     | `#990000` |
+| Success           | Forest Green | `#336633` |
 
 ---
 
 ## 📞 Important Contacts
 
-| Purpose | Contact |
-|---------|---------|
-| Trek booking | selvaggioblu@turismobaunei.eu |
-| Phone | +39 349 546 2583 |
-| Office hours | Mon-Fri 10:00-13:00, 15:00-16:00 |
-| Emergency (EU) | 112 |
-| Mountain Rescue | 118 |
+| Purpose         | Contact                          |
+| --------------- | -------------------------------- |
+| Trek booking    | selvaggioblu@turismobaunei.eu    |
+| Phone           | +39 349 546 2583                 |
+| Office hours    | Mon-Fri 10:00-13:00, 15:00-16:00 |
+| Emergency (EU)  | 112                              |
+| Mountain Rescue | 118                              |
 
 ---
 
@@ -185,6 +186,7 @@ See [agent.md](agent.md) for detailed style guidelines.
 This guide is for **informational purposes only**. Trekking the Selvaggio Blu is an extreme activity with inherent risks. Users are solely responsible for their own safety.
 
 **Always:**
+
 - Check current conditions before departure
 - Register with the Municipality of Baunei (€30 fee)
 - Carry appropriate safety equipment
@@ -214,4 +216,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-*Last updated: December 2024*
+_Last updated: December 2024_
