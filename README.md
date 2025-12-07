@@ -32,11 +32,11 @@ With proper preparation, skills, and a logistics service for food/water delivery
 
 ## 🗺️ Route Variants
 
-| Route                                       | Duration | Difficulty  | Rappelling             |
-| ------------------------------------------- | -------- | ----------- | ---------------------- |
-| **[Classic Route](index.html)**             | 4-5 days | 🔴 Extreme  | 8 rappels (up to 50m)  |
-| **[Short Version](variant-short.html)**     | 2-3 days | 🟢 Moderate | None required          |
-| **[Extended Route](variant-extended.html)** | 5 days   | 🔴 Extreme+ | 8+ rappels (up to 45m) |
+| Route                                                | Duration | Difficulty  | Rappelling             |
+| ---------------------------------------------------- | -------- | ----------- | ---------------------- |
+| **[Classic Route](website/index.html)**              | 4-5 days | 🔴 Extreme  | 8 rappels (up to 50m)  |
+| **[Short Version](website/variant-short.html)**      | 2-3 days | 🟢 Moderate | None required          |
+| **[Extended Route](website/variant-extended.html)**  | 5 days   | 🔴 Extreme+ | 8+ rappels (up to 45m) |
 
 ---
 
@@ -54,15 +54,17 @@ With proper preparation, skills, and a logistics service for food/water delivery
 
 ```
 wild-blue-trek/
-├── index.html            # Main trek guide (classic route)
-├── about.html            # Project philosophy
-├── variant-short.html    # Short version (no ropes)
-├── variant-extended.html # Extended route to Cala Gonone
-├── README.md             # This file
-├── LICENSE               # MIT License
-├── agent.md              # AI agent instructions
-├── .gitignore            # Git ignore rules
-└── .nojekyll             # Disable Jekyll processing
+├── website/                    # Website files (deploy this folder)
+│   ├── index.html              # Main trek guide (classic route)
+│   ├── about.html              # Project philosophy
+│   ├── variant-short.html      # Short version (no ropes)
+│   ├── variant-extended.html   # Extended route to Cala Gonone
+│   └── .nojekyll               # Disable Jekyll processing
+├── README.md                   # This file
+├── LICENSE                     # MIT License
+├── Agents instructions.md      # AI agent instructions
+├── CONTRIBUTING.md             # Contribution guidelines
+└── .gitignore                  # Git ignore rules
 ```
 
 ---
@@ -75,7 +77,7 @@ This site is deployed on Cloudflare Pages:
 
 1. Connect your GitHub repository to Cloudflare Pages
 2. **Build command:** (none - static HTML)
-3. **Build output directory:** `/` (root)
+3. **Build output directory:** `website`
 4. **Branch:** `main`
 
 ### Alternative Hosting
